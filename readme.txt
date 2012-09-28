@@ -11,20 +11,22 @@ Add the power of portfolio content management to your WordPress website with Por
 
 == Description ==
 
-With Portfolio Mgmt., you can bring the power of portfolio content management to your WordPress website. This plugin registers a custom post type developed specifically for organizing and displaying your portfolio posts. Portfolio Mgmt. will also register custom taxonomies for Services and Portfolio Tags, supports post-thumbnails and comes with a custom widget for displaying recent portfolio posts in your widget ready areas.
+With Portfolio Mgmt., you can bring the power of portfolio content management to your WordPress website. This plugin registers a custom post type developed specifically for organizing and displaying your portfolio posts. Portfolio Mgmt. will also register custom taxonomies for Services and Portfolio Tags, supports `post-thumbnails` and comes with a custom widget for displaying recent portfolio posts in your widget ready areas.
 
-Please note that Portfolio Mgmt. will not alter the appearance of your theme when displaying portfolio posts or archives. If your currently active theme does not contain the following optional templates, the next available default template, in the WordPress template hierarchy, will be will be used.
+**Please note that Portfolio Mgmt. will not alter the appearance of your theme when displaying portfolio posts or archives.** If your currently active theme does not contain the following optional templates, the next available default template, in the WordPress template hierarchy, will be will be used.
 
-* single-wap8-portfolio.php - This template should be used for customized single portfolio posts.
-* archive-wap8-portfolio.php - This template should be used for customized portfolio archive view.
-* taxonomy-wap8-services.php - This template should be used for customized Services taxonomy view.
-* taxonomy-wap8-portfolio-tags.php - This template should be used for customized Portfolio Tags taxonomy view.
+* `single-wap8-portfolio.php` - This template should be used for customized single portfolio posts.
+* `archive-wap8-portfolio.php` - This template should be used for customized portfolio archive view.
+* `taxonomy-wap8-services.php` - This template should be used for customized Services taxonomy view.
+* `taxonomy-wap8-portfolio-tags.php` - This template should be used for customized Portfolio Tags taxonomy view.
 	
 Please see the WordPress Codex for detailed information about template hierarchies at http://codex.wordpress.org/Template_Hierarchy.
 
 == Installation ==
 
-You can install Portfolio Mgmt. either via the WordPress Dashboard or using by uploading the extracted wap8-portfolio-mgmt folder to your /wp-conten/plugins/ directory. Once the plugin has been successfully installed, simply activate the plugin through the Plugins menu in your WordPress Dashboard.
+You can install Portfolio Mgmt. either via the WordPress Dashboard or using by uploading the extracted `wap8-portfolio-mgmt` folder to your `/wp-conten/plugins/` directory. Once the plugin has been successfully installed, simply activate the plugin through the Plugins menu in your WordPress Dashboard.
+
+If you get a 404 error after publishing a portfolio post, click on Permalinks in your Settings menu and click Save Changes.
 
 == Frequently Asked Questions ==
 
