@@ -15,6 +15,7 @@ add_filter( 'manage_edit-wap8-portfolio_columns', 'wap8_custom_portfolio_columns
  * @return $columns Custom post columns
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -53,6 +54,7 @@ add_action( 'manage_wap8-portfolio_posts_custom_column', 'wap8_portfolio_columns
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *

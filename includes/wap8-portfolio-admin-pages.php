@@ -10,6 +10,7 @@
  * The HTML content to be displayed on the Portfolio Manager Documentation page.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -130,7 +131,7 @@ function wap8_portfolio_doc_page() {
 /* Add Portfolio Manager menu page
 /*-----------------------------------------------------------------------------------*/
 
-add_action( 'admin_menu', 'wap8_portfolio_add_menu_page' );
+add_action( 'admin_menu', 'wap8_portfolio_add_menu_page', 11 );
 
 /**
  * Add Portfolio Manager menu page.
@@ -138,7 +139,8 @@ add_action( 'admin_menu', 'wap8_portfolio_add_menu_page' );
  * Add Portfolio Manager admin menu link using add_menu_page.
  *
  * @package Portfolio Mgmt.
- * @since 1.0.0
+ * @version 1.0.0
+ * @since 1.0.1
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */

@@ -12,6 +12,7 @@ add_action( 'init', 'wap8_register_services' );
  * Register wap8-services as a hierarchical custom taxonomy for the wap8-portfolio custom post type.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -71,6 +72,7 @@ add_action( 'init', 'wap8_register_portfolio_tags' );
  * Register wap8-portfolio-tags as a non-hierarchical custom taxonomy for the wap8-portfolio custom post type.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *

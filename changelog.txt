@@ -2,3 +2,10 @@ Portfolio Manager 1.0.0
 =======================
 
 * Initial release
+
+Portfolio Manager 1.0.1
+=======================
+
+* Improved PHP DocBlock Documentation
+* Lowered priority of wap8_portfolio_add_menu_page() function to 11
+* Lowered priority of wap8_portfolio_help_tabs() function to 11

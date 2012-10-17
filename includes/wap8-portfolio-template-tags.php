@@ -16,6 +16,7 @@
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -40,6 +41,7 @@ function wap8_list_services( $post_id ) {
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -81,6 +83,7 @@ function wap8_list_services_nolink( $post_id ) {
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -109,6 +112,7 @@ function wap8_ul_services( $post_id ) {
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -148,6 +152,7 @@ function wap8_ul_services_nolink( $post_id ) {
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -172,6 +177,7 @@ function wap8_list_folio_tags( $post_id ) {
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -213,6 +219,7 @@ function wap8_list_folio_tags_nolink( $post_id ) {
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -241,6 +248,7 @@ function wap8_ul_folio_tags( $post_id ) {
  * @param $post_id Post ID
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *

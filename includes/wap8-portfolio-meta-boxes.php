@@ -12,6 +12,7 @@ add_action( 'add_meta_boxes', 'wap8_add_portfolio_meta_boxes' );
  * Add meta boxes to the portfolio post editor using the add_meta_box function.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -36,6 +37,7 @@ function wap8_add_portfolio_meta_boxes() {
  * @param $post
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -90,6 +92,7 @@ add_action( 'save_post', 'wap8_save_portfolio_meta' );
  * @param $id
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *

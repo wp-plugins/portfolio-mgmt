@@ -12,6 +12,7 @@ add_action( 'init', 'wap8_portfolio' );
  * Register wap8-portfolio as a custom post type upon activation.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -84,6 +85,7 @@ add_action( 'init', 'wap8_portfolio_post_thumbnails' );
  * Add theme support for post-thumbnails, if the current theme does not already.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -111,6 +113,7 @@ register_activation_hook( __FILE__, 'wap8_portfolio_plugin_activation' );
  * Flushing the permalinks upon plugin activation to avoid any potential 404 errors.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -133,6 +136,7 @@ register_deactivation_hook( __FILE__, 'wap8_portfolio_plugin_deactivation' );
  * Flushing the permalinks upon plugin deactivation to avoid any potential 404 errors.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *

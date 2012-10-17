@@ -12,6 +12,7 @@ add_action( 'widgets_init', 'wap8_portfolio_widget' );
  * Register the recent portfolio posts widget.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *

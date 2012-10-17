@@ -12,6 +12,7 @@
  * @param $tab Currently active tab
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -126,8 +127,8 @@ function wap8_portfolio_help_tabs_content( $tab = 'wap8_portfolio_help_meta' ) {
 /* Add portfolio help tabs
 /*-----------------------------------------------------------------------------------*/
 
-add_action( 'load-post.php', 'wap8_portfolio_help_tabs' );
-add_action( 'load-post-new.php', 'wap8_portfolio_help_tabs' );
+add_action( 'load-post.php', 'wap8_portfolio_help_tabs', 11 );
+add_action( 'load-post-new.php', 'wap8_portfolio_help_tabs', 11 );
 
 /**
  * Portfolio help tabs.
@@ -135,7 +136,8 @@ add_action( 'load-post-new.php', 'wap8_portfolio_help_tabs' );
  * Add help tabs to the portfolio post editor screen.
  *
  * @package Portfolio Mgmt.
- * @since 1.0.0
+ * @version 1.0.0
+ * @since 1.0.1
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */

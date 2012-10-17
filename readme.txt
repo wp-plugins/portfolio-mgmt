@@ -4,7 +4,7 @@ Tags: custom post type, portfolio, post type, widget
 Requires at least: 3.1
 Compatible up to: 3.4.2
 Tested up to: 3.4.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2
 
 Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
@@ -39,9 +39,6 @@ Yes. Please note that Portfolio Mgmt. will only add theme support for this featu
 = Does Portfolio Mgmt. come with any widgets? =
 Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most recently published portfolio posts in any widget ready area.
 
-= Can theme developers remove the default Help Tabs? =
-Yes. You will need to nest `remove_action( 'load-post.php', 'wap8_portfolio_help_tabs' )` and `remove_action( 'load-post-new.php', 'wap8_portfolio_help_tabs' ) within `( function_exists( 'wap8_portfolio' ) )` check in your theme functions file.
-
 == Screenshots ==
 
 1. A custom portfolio edit screen which can be sorted by client name and filtered by Services or Portfolio Tags.
@@ -55,3 +52,8 @@ Yes. You will need to nest `remove_action( 'load-post.php', 'wap8_portfolio_help
 
 = 1.0.0 =
 * Initial release
+
+= 1.0.1 =
+* Improved PHP DocBlock Documentation
+* Lowered priority of wap8_portfolio_add_menu_page() function to 11
+* Lowered priority of wap8_portfolio_help_tabs() function to 11

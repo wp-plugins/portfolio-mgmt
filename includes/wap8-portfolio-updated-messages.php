@@ -15,6 +15,7 @@ add_filter( 'post_updated_messages', 'wap8_updated_portfolio_messages' );
  * @return $messages Custom post updated messages
  *
  * @package Portfolio Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
