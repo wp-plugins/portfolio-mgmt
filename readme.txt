@@ -40,7 +40,7 @@ Yes. Please note that Portfolio Mgmt. will only add theme support for this featu
 Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most recently published portfolio posts in any widget ready area.
 
 = Can theme developers remove the default Help Tabs? =
-Yes. You will need to nest `remove_action( 'load-post.php', 'wap8_portfolio_help_tabs' )` and `remove_action( 'load-post-new.php', 'wap8_portfolio_help_tabs' ) within `if ( function_exists( 'wap8_portfolio' ) )` check in your theme `functions.php` file.
+Yes. You will need to nest `remove_action( 'load-post.php', 'wap8_portfolio_help_tabs' )` and `remove_action( 'load-post-new.php', 'wap8_portfolio_help_tabs' ) within `( function_exists( 'wap8_portfolio' ) )` check in your theme functions file.
 
 == Screenshots ==
 
