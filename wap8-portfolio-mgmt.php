@@ -4,7 +4,7 @@
 Plugin Name: Portfolio Mgmt.
 Plugin URI: http://www.wearepixel8.com/2943/portfolio-mgmt-wordpress-plugin/
 Description: Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
-Version: 1.0.1
+Version: 1.0.2
 Author: We Are Pixel8
 Author URI: http://www.wearepixel8.com
 License:
@@ -34,20 +34,20 @@ define( 'WAP8PORTFOLIO', plugin_dir_path( __FILE__ ) );
 /*-----------------------------------------------------------------------------------*/
 
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-taxonomies.php' ); // register custom taxonomies
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-registration.php' ); // register custom custom post type
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-registration.php' ); // register custom post type
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-meta-boxes.php' ); // add custom meta boxes to the post editor screen
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-help-tabs.php' ); // add help tabs to the portfolio post editor screen
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-updated-messages.php' ); // custom post updated messages
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-custom-columns.php' ); // add custom columns to custom post type edit screen
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-widget.php' ); // portfolio widget
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-template-tags.php' ); // custom template tags
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-template-tags.php' ); // template tags
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-admin-pages.php' ); // add admin info page
 
 /*-----------------------------------------------------------------------------------*/
 /* Load language file
 /*-----------------------------------------------------------------------------------*/
 
-add_action( 'plugins_loaded', 'wap8_portfolio_text_domain');
+add_action( 'plugins_loaded', 'wap8_portfolio_text_domain', 10 );
 
 /**
  * Portfolio text domain.
@@ -63,7 +63,7 @@ add_action( 'plugins_loaded', 'wap8_portfolio_text_domain');
 
 function wap8_portfolio_text_domain() {
 	
-	load_plugin_textdomain( 'wap8plugin-i18n', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'wap8plugin-i18n', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	
 }
 

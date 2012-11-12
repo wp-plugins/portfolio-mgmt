@@ -1,11 +1,11 @@
 <?php
 
-/*-----------------------------------------------------------------------------------*/
-/* Comma separated services with links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* List Services
+/*----------------------------------------------------------------------------*/
 
 /**
- * Comma separated services with links.
+ * List Services
  *
  * Use this template tag, within the loop, to return a comma separated list of
  * services attached to a portfolio post and wrapped by a paragraph tag. Each
@@ -28,12 +28,12 @@ function wap8_list_services( $post_id ) {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Comma separated services without links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* List Services without Link
+/*----------------------------------------------------------------------------*/
 
 /**
- * Comma separated services without links.
+ * List Services No Link
  *
  * Use this template tag, within the loop, to return a comma separated list of
  * services attached to a portfolio post.
@@ -67,12 +67,12 @@ function wap8_list_services_nolink( $post_id ) {
 	endif;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Unordered list of services with links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Unordered List of Services
+/*----------------------------------------------------------------------------*/
 
 /**
- * Unordered list of services with links.
+ * Unordered List of Services
  *
  * Use this template tag, within the loop, to return an unordered list of
  * services attached to a portfolio post. Each term will be wrapped with a list
@@ -99,12 +99,12 @@ function wap8_ul_services( $post_id ) {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Unordered list of services without links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Unordered List of Services without Link
+/*----------------------------------------------------------------------------*/
 
 /**
- * Unordered list of services without links.
+ * Unordered List of Services No Link
  *
  * Use this template tag, within the loop, to return an unordered list of
  * services attached to a portfolio post.
@@ -136,12 +136,12 @@ function wap8_ul_services_nolink( $post_id ) {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Comma separated portfolio tags with links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* List Portfolio Tags
+/*----------------------------------------------------------------------------*/
 
 /**
- * Comma separated portfolio tags with links.
+ * List Portfolio Tags
  *
  * Use this template tag, within the loop, to return a comma separated list of
  * portfolio tags attached to a portfolio post and wrapped by a paragraph tag.
@@ -164,12 +164,12 @@ function wap8_list_folio_tags( $post_id ) {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Comma separated portfolio tags without links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* List Portfolio Tags without Link
+/*----------------------------------------------------------------------------*/
 
 /**
- * Comma separated portfolio tags without links.
+ * List Portfolio Tags without Link
  *
  * Use this template tag, within the loop, to return a comma separated list of
  * services attached to a portfolio post.
@@ -203,12 +203,12 @@ function wap8_list_folio_tags_nolink( $post_id ) {
 	endif;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Unordered list of portfolio tags with links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Unordered List of Portfolio Tags
+/*----------------------------------------------------------------------------*/
 
 /**
- * Unordered list of portfolio tags with links.
+ * Unordered List of Portfolio Tags
  *
  * Use this template tag, within the loop, to return an unordered list of
  * portfolio tags attached to a portfolio post. Each term will be wrapped with
@@ -235,12 +235,12 @@ function wap8_ul_folio_tags( $post_id ) {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Unordered list of portfolio tags without links
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Unordered List of Portfolio Tags without Link
+/*----------------------------------------------------------------------------*/
 
 /**
- * Unordered list of portfolio tags without links.
+ * Unordered List of Portfolio Tags without Link
  *
  * Use this template tag, within the loop, to return an unordered list of
  * portfolio tags attached to a portfolio post.

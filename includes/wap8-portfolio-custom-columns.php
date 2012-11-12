@@ -1,13 +1,13 @@
 <?php
 
-/*-----------------------------------------------------------------------------------*/
-/* Customize columns on portfolio edit screen
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Custom Portfolio Columns
+/*----------------------------------------------------------------------------*/
 
-add_filter( 'manage_edit-wap8-portfolio_columns', 'wap8_custom_portfolio_columns' );
+add_filter( 'manage_edit-wap8-portfolio_columns', 'wap8_custom_portfolio_columns', 10, 1 );
 
 /**
- * Custom portfolio columns.
+ * Custom Portfolio Columns
  *
  * Customizing the columns for the wap8-portfolio custom post type edit screen.
  *
@@ -24,27 +24,27 @@ add_filter( 'manage_edit-wap8-portfolio_columns', 'wap8_custom_portfolio_columns
 function wap8_custom_portfolio_columns( $columns ) {
 
 	$columns = array(
-		'cb'							=> '<input type="checkbox" />',
-		'title'							=> _x( __( 'Case Study', 'wap8plugin-i18n' ), 'column name' ),
-		'wap8-client-column'			=> __( 'Client', 'wap8plugin-i18n' ),
-		'author'						=> __( 'Author', 'wap8plugin-i18n' ),
-		'wap8-services-column'			=> __( 'Services', 'wap8plugin-i18n' ),	// custom column for services
-		'wap8-portfolio-tags-column'	=> __( 'Portfolio Tags', 'wap8plugin-i18n' ), // custom column for portfolio tags
-		'date'							=> _x( __( 'Date', 'wap8plugin-i18n' ), 'column name' )
+		'cb'                         => '<input type="checkbox" />',
+		'title'                      => _x( __( 'Case Study', 'wap8plugin-i18n' ), 'column name' ),
+		'wap8-client-column'         => __( 'Client', 'wap8plugin-i18n' ),
+		'author'                     => __( 'Author', 'wap8plugin-i18n' ),
+		'wap8-services-column'       => __( 'Services', 'wap8plugin-i18n' ),	// custom column for services
+		'wap8-portfolio-tags-column' => __( 'Portfolio Tags', 'wap8plugin-i18n' ), // custom column for portfolio tags
+		'date'                       => _x( __( 'Date', 'wap8plugin-i18n' ), 'column name' )
 	);
 	
 	return $columns;
 
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Add custom content to our custom columns
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Portfolio Columns Content
+/*----------------------------------------------------------------------------*/
 
-add_action( 'manage_wap8-portfolio_posts_custom_column', 'wap8_portfolio_columns_content' );
+add_action( 'manage_wap8-portfolio_posts_custom_column', 'wap8_portfolio_columns_content', 10, 2 );
 
 /**
- * Portfolio services column.
+ * Portfolio Columns Content
  *
  * Adding the custom taxonomies and client names to their respective custom
  * columns. The taxonomies should be comma separated anchors similar to post
@@ -96,8 +96,8 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 						esc_url(
 							add_query_arg(
 								array(
-									'wap8-portfolio'	=> $post->post_type,
-									'wap8-services'		=> $term->slug
+									'post_type'      => $post->post_type,
+									'wap8-services'  => $term->slug
 								), 'edit.php' ) ),
 							esc_html( sanitize_term_field( 'name', $term->name, $term->term_id, 'wap8-services', 'display' ) )
 						);
@@ -129,8 +129,8 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 						esc_url(
 							add_query_arg(
 								array(
-									'wap8-portfolio'		=> $post->post_type,
-									'wap8-portfolio-tags'	=> $term->slug
+									'post_type'           => $post->post_type,
+									'wap8-portfolio-tags' => $term->slug
 								), 'edit.php' ) ),
 							esc_html( sanitize_term_field( 'name', $term->name, $term->term_id, 'wap8-portfolio-tags', 'display' ) )
 						);
@@ -156,20 +156,21 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Make client column a sortable column
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Portfolio Sortable Columns
+/*----------------------------------------------------------------------------*/
 
-add_filter( 'manage_edit-wap8-portfolio_sortable_columns', 'wap8_portfolio_sortable_columns' );
+add_filter( 'manage_edit-wap8-portfolio_sortable_columns', 'wap8_portfolio_sortable_columns', 10, 1 );
 
 /**
- * Portfolio sortable column.
+ * Portfolio Sortable Columns
  *
  * Let WordPress know the client column should be sortable.
  *
  * @param $columns Post columns
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -183,15 +184,20 @@ function wap8_portfolio_sortable_columns( $columns ) {
 
 }
 
-add_action( 'load-edit.php', 'wap8_portfolio_edit_load' );
+/*----------------------------------------------------------------------------*/
+/* Portfolio Edit Load
+/*----------------------------------------------------------------------------*/
+
+add_action( 'load-edit.php', 'wap8_portfolio_edit_load', 10 );
 
 /**
- * Portfolio edit load.
+ * Portfolio Edit Load
  *
  * Using the load-edit hook to insure we are on the edit.php screen. If so, add
  * our custom filter to request.
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -199,18 +205,23 @@ add_action( 'load-edit.php', 'wap8_portfolio_edit_load' );
 
 function wap8_portfolio_edit_load() {
 	
-	add_filter( 'request', 'wap8_sort_portfolio_clients' );
+	add_filter( 'request', 'wap8_sort_portfolio_clients', 10, 1 );
 	
 }
 
+/*----------------------------------------------------------------------------*/
+/* Sort Portfolio Clients
+/*----------------------------------------------------------------------------*/
+
 /**
- * Sort portfolio clients.
+ * Sort Portfolio Clients
  *
  * If we are sorting the client column, sort _wap8_client_name by meta_value.
  *
  * @param $vars
  *
  * @package Portfolio Mgmt.
+ * @version 1.0.0
  * @since 1.0.0
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
@@ -228,7 +239,7 @@ function wap8_sort_portfolio_clients( $vars ) {
 					$vars,
 						array(
 							'meta_key' => '_wap8_client_name',
-							'orderby' => 'meta_value'
+							'orderby'  => 'meta_value'
 					)
 				);
 			

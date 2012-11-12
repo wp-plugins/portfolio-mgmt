@@ -1,11 +1,11 @@
 <?php
 
-/*-----------------------------------------------------------------------------------*/
-/* Documentation page content
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Portfolio Doc Page
+/*----------------------------------------------------------------------------*/
 
 /**
- * Portfolio Manager Documentation page content.
+ * Portfolio Doc Page
  *
  * The HTML content to be displayed on the Portfolio Manager Documentation page.
  *
@@ -127,14 +127,14 @@ function wap8_portfolio_doc_page() {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Add Portfolio Manager menu page
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Add Menu Page
+/*----------------------------------------------------------------------------*/
 
-add_action( 'admin_menu', 'wap8_portfolio_add_menu_page', 11 );
+add_action( 'admin_menu', 'wap8_portfolio_add_menu_page', 10 );
 
 /**
- * Add Portfolio Manager menu page.
+ * Add Menu Page
  *
  * Add Portfolio Manager admin menu link using add_menu_page.
  *
@@ -148,13 +148,13 @@ add_action( 'admin_menu', 'wap8_portfolio_add_menu_page', 11 );
 function wap8_portfolio_add_menu_page() {
 	
 	add_menu_page(
-		__( 'Portfolio Mgmt. Documentation', 'wap8plugin-i18n' ),			// page title
-		__( 'Portfolio Mgmt.', 'wap8plugin-i18n' ),							// menu title
-		'edit_posts',														// only viewable by anyone who has edit-posts capabilities
-		'wap8-portfolio-documentation',										// unique slug
-		'wap8_portfolio_doc_page',											// page content callback function
-		plugin_dir_url( dirname( __FILE__ ) ) . 'images/portfolio-doc.png',	// menu icon
-		90																	// menu position
+		__( 'Portfolio Mgmt. Documentation', 'wap8plugin-i18n' ),           // page title
+		__( 'Portfolio Mgmt.', 'wap8plugin-i18n' ),                         // menu title
+		'edit_posts',                                                       // only viewable by anyone who has edit-posts capabilities
+		'wap8-portfolio-documentation',                                     // unique slug
+		'wap8_portfolio_doc_page',                                          // page content callback function
+		plugin_dir_url( dirname( __FILE__ ) ) . 'images/portfolio-doc.png', // menu icon
+		90                                                                  // menu position
 	);
 	
 }

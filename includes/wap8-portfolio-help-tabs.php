@@ -1,11 +1,11 @@
 <?php
 
-/*-----------------------------------------------------------------------------------*/
-/* Portfolio help tabs content
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Portfolio Help Tabs Content
+/*----------------------------------------------------------------------------*/
 
 /**
- * Portfolio help tabs content.
+ * Portfolio Help Tabs Content
  *
  * The content to be displayed in the portfolio help tabs.
  *
@@ -123,15 +123,15 @@ function wap8_portfolio_help_tabs_content( $tab = 'wap8_portfolio_help_meta' ) {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Add portfolio help tabs
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Portfolio Help Tabs
+/*----------------------------------------------------------------------------*/
 
-add_action( 'load-post.php', 'wap8_portfolio_help_tabs', 11 );
-add_action( 'load-post-new.php', 'wap8_portfolio_help_tabs', 11 );
+add_action( 'load-post.php', 'wap8_portfolio_help_tabs', 10 );
+add_action( 'load-post-new.php', 'wap8_portfolio_help_tabs', 10 );
 
 /**
- * Portfolio help tabs.
+ * Portfolio Help Tabs
  *
  * Add help tabs to the portfolio post editor screen.
  *
@@ -149,16 +149,16 @@ function wap8_portfolio_help_tabs() {
     if ( $screen->id != 'wap8-portfolio' ) return; // if this is not the editor screen for portfolio posts, do nothing
     
     $screen->add_help_tab( array(
-    	'id'		=> 'wap8_portfolio_help_meta',
-		'title'		=> __( 'Custom Meta Data', 'wap8plugin-i18n' ),
-		'content'	=> wap8_portfolio_help_tabs_content( 'wap8_portfolio_help_meta' )
+    	'id'      => 'wap8_portfolio_help_meta',
+		'title'   => __( 'Custom Meta Data', 'wap8plugin-i18n' ),
+		'content' => wap8_portfolio_help_tabs_content( 'wap8_portfolio_help_meta' )
 		)
 	);
 	
 	$screen->add_help_tab( array(
-    	'id'		=> 'wap8_portfolio_help_template_tags',
-		'title'		=> __( 'Template Tags', 'wap8plugin-i18n' ),
-		'content'	=> wap8_portfolio_help_tabs_content( 'wap8_portfolio_help_template_tags' )
+    	'id'      => 'wap8_portfolio_help_template_tags',
+		'title'   => __( 'Template Tags', 'wap8plugin-i18n' ),
+		'content' => wap8_portfolio_help_tabs_content( 'wap8_portfolio_help_template_tags' )
 		)
 	);
 	

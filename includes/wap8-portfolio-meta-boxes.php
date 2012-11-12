@@ -1,13 +1,13 @@
 <?php
 
-/*-----------------------------------------------------------------------------------*/
-/* Add portfolio meta boxes
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Add Portfolio Meta Boxes
+/*----------------------------------------------------------------------------*/
 
-add_action( 'add_meta_boxes', 'wap8_add_portfolio_meta_boxes' );
+add_action( 'add_meta_boxes', 'wap8_add_portfolio_meta_boxes', 10 );
 
 /**
- * Add portfolio meta boxes.
+ * Add Portfolio Meta Boxes
  *
  * Add meta boxes to the portfolio post editor using the add_meta_box function.
  *
@@ -24,12 +24,12 @@ function wap8_add_portfolio_meta_boxes() {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Portfolio meta box callback functions
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Portfolio Case Info Callback
+/*----------------------------------------------------------------------------*/
 
 /**
- * Case study information meta box callback.
+ * Portfolio Case Info Callback
  *
  * Render a sidebar meta box to save client meta data and a project URL, if one
  * is relevant.
@@ -58,17 +58,17 @@ function wap8_portfolio_case_info_cb( $post ) {
 	<p><?php _e( 'Case study information is optional meta data that can used by your theme.', 'wap8plugin-i18n' ); ?></p>
 	
 	<p>
-		<label for="wap8-client-name"><strong><?php _e( 'Client Name', 'wap8plugin-i18n' ); ?></strong></label><br />
+		<label for="wap8-client-name"><?php _e( 'Client Name', 'wap8plugin-i18n' ); ?></label><br />
 		<input type="text" id="wap8-client-name" name="_wap8_client_name" size="30" value="<?php echo $client; ?>" />
 	</p>
 	
 	<p>
-		<label for="wap8-project-url"><strong><?php _e( 'Project URL', 'wap8plugin-i18n' ); ?></strong></label><br />
+		<label for="wap8-project-url"><?php _e( 'Project URL', 'wap8plugin-i18n' ); ?></strong><br />
 		<input type="text" id="wap8-project-url" name="_wap8_project_url" size="30" value="<?php echo esc_url( $project_url ) ?>" /><br />
 	</p>
 	
 	<p>
-		<label for="wap8-project-url-text"><strong><?php _e( 'Project URL Text', 'wap8plugin-i18n' ); ?></strong></label><br />
+		<label for="wap8-project-url-text"><?php _e( 'Project URL Text', 'wap8plugin-i18n' ); ?></label><br />
 		<input type="text" id="wap8-project-url-text" name="_wap8_project_url_text" size="30" value="<?php echo $project_url_text; ?>" /><br />
 	</p>
 	
@@ -78,11 +78,11 @@ function wap8_portfolio_case_info_cb( $post ) {
 	
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Save portfolio meta boxes
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Save Portfolio Meta
+/*----------------------------------------------------------------------------*/
 
-add_action( 'save_post', 'wap8_save_portfolio_meta' );
+add_action( 'save_post', 'wap8_save_portfolio_meta', 10 );
 
 /**
  * Save portfolio meta.

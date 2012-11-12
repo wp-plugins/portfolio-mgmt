@@ -57,3 +57,8 @@ Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most re
 * Improved PHP DocBlock Documentation
 * Lowered priority of wap8_portfolio_add_menu_page() function to 11
 * Lowered priority of wap8_portfolio_help_tabs() function to 11
+
+= 1.0.2 =
+* All functions now have a priority of 10
+* Fixed widget issue where are posts were returning instead of set number
+* Fixed an issue where the custom taxonomy links on the edit screen were not working as intended

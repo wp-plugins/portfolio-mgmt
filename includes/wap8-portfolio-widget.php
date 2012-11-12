@@ -1,10 +1,10 @@
 <?php
 
-/*-----------------------------------------------------------------------------------*/
-/* Register widget
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Register Widget
+/*----------------------------------------------------------------------------*/
 
-add_action( 'widgets_init', 'wap8_portfolio_widget' );
+add_action( 'widgets_init', 'wap8_portfolio_widget', 10 );
 
 /**
  * Portfolio widget.
@@ -22,9 +22,9 @@ function wap8_portfolio_widget() {
 	register_widget( 'wap8_Portfolio_Widget' );
 }
 
-/*-----------------------------------------------------------------------------------*/
-/* Extend WP_Widget by adding this widget class
-/*-----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/* Extend WP_Widget by adding This Widget Class
+/*----------------------------------------------------------------------------*/
 
 class wap8_Portfolio_Widget extends WP_Widget {
 	
@@ -32,8 +32,8 @@ class wap8_Portfolio_Widget extends WP_Widget {
 	function wap8_Portfolio_Widget() {
 		
 		$widget_ops = array(
-			'classname'		=> 'wap8-portfolio-widget',
-			'description'	=> __( 'Display recent portfolio case study posts.', 'wap8plugin-i18n' )
+			'classname'   => 'wap8-portfolio-widget',
+			'description' => __( 'Display recent portfolio case study posts.', 'wap8plugin-i18n' )
 			);
 			
 		$this->WP_Widget( 'wap8-Portfolio-widget', __( 'Recent Portfolio Posts', 'wap8plugin-i18n' ), $widget_ops );	
@@ -53,7 +53,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 		echo $before_widget; // echo HTML set in register_sidebar by the currently active theme
 		
-		if ( !empty( $title ) ) { // if this widget has a title
+		if ( $title ) { // if this widget has a title
 		
 			echo $before_title . $title . $after_title; // display the title wrapped with the HTML set by the currently active theme
 			
@@ -61,11 +61,11 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 		// save custom loop arguments in an array
 		$args = array(
-			'post_type'		=> 'wap8-portfolio',
-			'post_status'	=> 'publish',
-			'post_per_page'	=> $studies_count,
-			'orderby'		=> 'date',
-			'order'			=> 'DESC'
+			'post_type'      => 'wap8-portfolio',
+			'post_status'    => 'publish',
+			'posts_per_page' => $studies_count,
+			'orderby'        => 'date',
+			'order'	         => 'DESC'
 		);
 		
 		$studies = new WP_Query( $args ); // open a custom query
@@ -74,7 +74,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 			echo '<ul>' . "\n"; // opening unordered list tag
 			
-			while ( $studies -> have_posts() ) : ( $studies -> the_post() );
+			while ( $studies->have_posts() ) : ( $studies->the_post() );
 			
 			?>
 			
