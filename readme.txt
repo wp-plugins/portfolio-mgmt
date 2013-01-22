@@ -2,9 +2,9 @@
 Contributors: wearepixel8
 Tags: custom post type, portfolio, post type, widget
 Requires at least: 3.1
-Compatible up to: 3.4.2
-Tested up to: 3.4.2
-Stable tag: 1.0.2
+Compatible up to: 3.5
+Tested up to: 3.5
+Stable tag: 1.0.3
 License: GPLv2
 
 Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
@@ -62,3 +62,6 @@ Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most re
 * All functions now have a priority of 10
 * Fixed widget issue where all posts were returning instead of set number
 * Fixed an issue where the custom taxonomy links on the edit screen were not working as intended
+
+= 1.0.3 =
+* Updated WordPress compatibility version to 3.5
