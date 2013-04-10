@@ -16,7 +16,7 @@ add_filter( 'post_updated_messages', 'wap8_updated_portfolio_messages', 10, 1 );
  *
  * @package Portfolio Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.4 Fixed incorrect text domain
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -38,7 +38,7 @@ function wap8_updated_portfolio_messages( $messages ) {
 		8  => sprintf( __( 'Case study submitted. <a target="_blank" href="%s">Preview case study</a>', 'wap8plugin-i18n' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
 		9  => sprintf( __( 'Case study scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview case study</a>', 'wap8plugin-i18n' ),
 		// translators: Publish box date format, see http://php.net/date
-		date_i18n( __( 'M j, Y @ G:i', 'wap8lang' ), strtotime( $post->post_date ) ), esc_url( get_permalink( $post_ID ) ) ),
+		date_i18n( __( 'M j, Y @ G:i', 'wap8plugin-i18n' ), strtotime( $post->post_date ) ), esc_url( get_permalink( $post_ID ) ) ),
 		10 => sprintf( __( 'Case study draft updated. <a target="_blank" href="%s">Preview case study</a>', 'wap8plugin-i18n' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
 	);
 

@@ -38,7 +38,7 @@ function wap8_add_portfolio_meta_boxes() {
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.4 Improved nonce verifications
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -51,7 +51,7 @@ function wap8_portfolio_case_info_cb( $post ) {
 	$project_url_text = get_post_meta( $post->ID, '_wap8_project_url_text', true ); // project URL text
 
 	// nonce to verify intention later
-	wp_nonce_field( 'save_wap8_portfolio_meta', 'wap8_portfolio_nonce' );
+	wp_nonce_field( plugin_basename( __FILE__ ), 'wap8_portfolio_nonce' );
 	
 	?>
 	
@@ -93,7 +93,7 @@ add_action( 'save_post', 'wap8_save_portfolio_meta', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.4 Improved nonce verification
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -101,25 +101,31 @@ add_action( 'save_post', 'wap8_save_portfolio_meta', 10 );
 function wap8_save_portfolio_meta( $id ) {
 	
 	// we do not want to auto save the data
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return; 
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+		return; 
 
 	// check our nonce
-	if ( !isset( $_POST['wap8_portfolio_nonce'] ) || !wp_verify_nonce( $_POST['wap8_portfolio_nonce'], 'save_wap8_portfolio_meta' ) ) return;
-
-	// Make sure the current user can edit the post
-	if ( !current_user_can( 'edit_post' ) ) return;
+	if ( !isset( $_POST['wap8_portfolio_nonce'] )
+		return;
 	
-	// strip all tags and escape HTML before saving client name
+	if ( !wp_verify_nonce( $_POST['wap8_portfolio_nonce'], plugin_basename( __FILE__ ) ) )
+		return;
+
+	// make sure the current user can edit the post
+	if ( !current_user_can( 'edit_post' ) )
+		return;
+	
+	// strip all tags and escape attributes before saving client name
 	if ( isset( $_POST['_wap8_client_name'] ) )
-		update_post_meta( $id, '_wap8_client_name', wp_strip_all_tags( esc_html( $_POST['_wap8_client_name'] ) ) );
+		update_post_meta( $id, '_wap8_client_name', wp_strip_all_tags( esc_attr( $_POST['_wap8_client_name'] ) ) );
 	
 	// escape URL before saving project URL
 	if ( isset( $_POST['_wap8_project_url'] ) )
 		update_post_meta( $id, '_wap8_project_url', esc_url_raw( $_POST['_wap8_project_url'] ) );
 	
-	// strip all tags and escape HTML before saving project URL text
+	// strip all tags and escape attributes before saving project URL text
 	if ( isset( $_POST['_wap8_project_url_text'] ) )
-		update_post_meta( $id, '_wap8_project_url_text', wp_strip_all_tags( esc_html( $_POST['_wap8_project_url_text'] ) ) );
+		update_post_meta( $id, '_wap8_project_url_text', wp_strip_all_tags( esc_attr( $_POST['_wap8_project_url_text'] ) ) );
 	
 }
 

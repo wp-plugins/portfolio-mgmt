@@ -21,3 +21,9 @@ Portfolio Mgmt. 1.0.3
 =====================
 
 * Updated WordPress compatibility version to 3.5
+
+Portfolio Mgmt. 1.0.4
+=====================
+
+* Improved nonce verification for custom meta box
+* Fixed incorrect text domains
