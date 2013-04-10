@@ -4,7 +4,7 @@
 Plugin Name: Portfolio Mgmt.
 Plugin URI: http://www.wearepixel8.com/2943/portfolio-mgmt-wordpress-plugin/
 Description: Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
-Version: 1.0.3
+Version: 1.0.4
 Author: We Are Pixel8
 Author URI: http://www.wearepixel8.com
 License:
