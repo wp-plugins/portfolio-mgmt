@@ -93,7 +93,7 @@ add_action( 'save_post', 'wap8_save_portfolio_meta', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.4 Improved nonce verification
+ * @since 1.0.5 Fixed syntax error
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -105,7 +105,7 @@ function wap8_save_portfolio_meta( $id ) {
 		return; 
 
 	// check our nonce
-	if ( !isset( $_POST['wap8_portfolio_nonce'] )
+	if ( !isset( $_POST['wap8_portfolio_nonce'] ) )
 		return;
 	
 	if ( !wp_verify_nonce( $_POST['wap8_portfolio_nonce'], plugin_basename( __FILE__ ) ) )

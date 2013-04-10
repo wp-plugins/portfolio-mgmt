@@ -13,7 +13,7 @@ add_action( 'init', 'wap8_portfolio', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.5 Remove menu icon
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -61,7 +61,6 @@ function wap8_portfolio() {
 		'hierarchical'       => false,
 		'has_archive'        => true,
 		'menu_position'      => 5,
-		'menu_icon'          => plugin_dir_url( dirname( __FILE__ ) ) . 'images/portfolio-icon.png',
 		'supports'           => $supports
 	);
 	

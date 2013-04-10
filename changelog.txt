@@ -27,3 +27,9 @@ Portfolio Mgmt. 1.0.4
 
 * Improved nonce verification for custom meta box
 * Fixed incorrect text domains
+
+Portfolio Mgmt. 1.0.5
+=====================
+
+* Changed admin menu icon
+* Fixed syntax error

@@ -69,3 +69,7 @@ Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most re
 = 1.0.4 =
 * Improved nonce verification for custom meta box
 * Fixed incorrect text domains
+
+= 1.0.5 =
+* Change admin menu icon
+* Fixed syntax error
