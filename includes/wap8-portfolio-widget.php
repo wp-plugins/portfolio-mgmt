@@ -163,5 +163,3 @@ class wap8_Portfolio_Widget extends WP_Widget {
 	}
 
 }
-
-?>

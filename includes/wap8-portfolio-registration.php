@@ -145,5 +145,3 @@ function wap8_portfolio_deactivation() {
 	global $wp_rewrite;
 	$wp_rewrite -> flush_rules();
 }
-
-?>

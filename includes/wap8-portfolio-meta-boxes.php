@@ -20,7 +20,7 @@ add_action( 'add_meta_boxes', 'wap8_add_portfolio_meta_boxes', 10 );
 
 function wap8_add_portfolio_meta_boxes() {
 	
-	add_meta_box( 'wap8-portfolio-case-info', __( 'Case Study Information', 'wap8' ), 'wap8_portfolio_case_info_cb', 'wap8-portfolio', 'side', 'high' );
+	add_meta_box( 'wap8-portfolio-case-info', __( 'Case Study Information', 'wap8plugin-i18n' ), 'wap8_portfolio_case_info_cb', 'wap8-portfolio', 'side', 'high' );
 	
 }
 
@@ -128,5 +128,3 @@ function wap8_save_portfolio_meta( $id ) {
 		update_post_meta( $id, '_wap8_project_url_text', wp_strip_all_tags( esc_attr( $_POST['_wap8_project_url_text'] ) ) );
 	
 }
-
-?>

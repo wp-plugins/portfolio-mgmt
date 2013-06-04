@@ -271,5 +271,3 @@ function wap8_ul_folio_tags_nolink( $post_id ) {
 	endif;
 	
 }
-
-?>

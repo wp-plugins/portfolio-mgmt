@@ -163,5 +163,3 @@ function wap8_portfolio_help_tabs() {
 	);
 	
 }
-
-?>

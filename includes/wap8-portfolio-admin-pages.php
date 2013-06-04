@@ -158,5 +158,3 @@ function wap8_portfolio_add_menu_page() {
 	);
 	
 }
-
-?>

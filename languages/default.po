@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portfolio Manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-10 11:01-0600\n"
-"PO-Revision-Date: 2013-04-10 11:02-0600\n"
+"POT-Creation-Date: 2013-06-04 14:50-0600\n"
+"PO-Revision-Date: 2013-06-04 14:50-0600\n"
 "Last-Translator: We Are Pixel8 <hello@wearepixel8.com>\n"
 "Language-Team: We Are Pixel8 <hello@wearepixel8.com>\n"
 "MIME-Version: 1.0\n"
@@ -153,42 +153,50 @@ msgid "Portfolio Mgmt."
 msgstr ""
 
 #: ../includes/wap8-portfolio-custom-columns.php:28
-msgid "Case Study"
+msgid "Thumbnail"
 msgstr ""
 
 #: ../includes/wap8-portfolio-custom-columns.php:29
-msgid "Client"
+msgid "Case Study"
 msgstr ""
 
 #: ../includes/wap8-portfolio-custom-columns.php:30
-msgid "Author"
+msgid "Client"
 msgstr ""
 
 #: ../includes/wap8-portfolio-custom-columns.php:31
-#: ../includes/wap8-portfolio-taxonomies.php:26
-#: ../includes/wap8-portfolio-taxonomies.php:44
-msgid "Services"
+msgid "Author"
 msgstr ""
 
 #: ../includes/wap8-portfolio-custom-columns.php:32
-#: ../includes/wap8-portfolio-taxonomies.php:87
-#: ../includes/wap8-portfolio-taxonomies.php:103
-msgid "Portfolio Tags"
+#: ../includes/wap8-portfolio-taxonomies.php:26
+#: ../includes/wap8-portfolio-taxonomies.php:45
+msgid "Services"
 msgstr ""
 
 #: ../includes/wap8-portfolio-custom-columns.php:33
+#: ../includes/wap8-portfolio-taxonomies.php:92
+#: ../includes/wap8-portfolio-taxonomies.php:109
+msgid "Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:34
 msgid "Date"
 msgstr ""
 
-#: ../includes/wap8-portfolio-custom-columns.php:79
+#: ../includes/wap8-portfolio-custom-columns.php:80
+msgid "<i>No thumbnail.</i>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:96
 msgid "<i>No client.</i>"
 msgstr ""
 
-#: ../includes/wap8-portfolio-custom-columns.php:112
+#: ../includes/wap8-portfolio-custom-columns.php:129
 msgid "<i>No services.</i>"
 msgstr ""
 
-#: ../includes/wap8-portfolio-custom-columns.php:145
+#: ../includes/wap8-portfolio-custom-columns.php:162
 msgid "<i>No portfolio tags.</i>"
 msgstr ""
 
@@ -315,74 +323,82 @@ msgid "All Services"
 msgstr ""
 
 #: ../includes/wap8-portfolio-taxonomies.php:31
-msgid "Parent Service"
+msgid "View Service"
 msgstr ""
 
 #: ../includes/wap8-portfolio-taxonomies.php:32
-msgid "Parent Service:"
+msgid "Parent Service"
 msgstr ""
 
 #: ../includes/wap8-portfolio-taxonomies.php:33
-msgid "Edit Service"
+msgid "Parent Service:"
 msgstr ""
 
 #: ../includes/wap8-portfolio-taxonomies.php:34
-msgid "Update Service"
+msgid "Edit Service"
 msgstr ""
 
 #: ../includes/wap8-portfolio-taxonomies.php:35
-msgid "Add New Service"
+msgid "Update Service"
 msgstr ""
 
 #: ../includes/wap8-portfolio-taxonomies.php:36
+msgid "Add New Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:37
 msgid "New Service"
 msgstr ""
 
-#: ../includes/wap8-portfolio-taxonomies.php:39
+#: ../includes/wap8-portfolio-taxonomies.php:40
 msgid "Choose from Most Used Services"
 msgstr ""
 
-#: ../includes/wap8-portfolio-taxonomies.php:88
+#: ../includes/wap8-portfolio-taxonomies.php:93
 msgid "Portfolio Tag"
 msgstr ""
 
-#: ../includes/wap8-portfolio-taxonomies.php:89
+#: ../includes/wap8-portfolio-taxonomies.php:94
 msgid "Search Portfolio Tags"
 msgstr ""
 
-#: ../includes/wap8-portfolio-taxonomies.php:90
+#: ../includes/wap8-portfolio-taxonomies.php:95
 msgid "Popular Portfolio Tags"
 msgstr ""
 
-#: ../includes/wap8-portfolio-taxonomies.php:91
+#: ../includes/wap8-portfolio-taxonomies.php:96
 msgid "All Portfolio Tags"
 msgstr ""
 
-#: ../includes/wap8-portfolio-taxonomies.php:92
-msgid "Edit Portfolio Tag"
-msgstr ""
-
-#: ../includes/wap8-portfolio-taxonomies.php:93
-msgid "Update Portfolio Tag"
-msgstr ""
-
-#: ../includes/wap8-portfolio-taxonomies.php:94
-msgid "Add New Portfolio Tag"
-msgstr ""
-
-#: ../includes/wap8-portfolio-taxonomies.php:95
-msgid "New Portfolio Tag"
-msgstr ""
-
-#: ../includes/wap8-portfolio-taxonomies.php:96
-msgid "Separate Portfolio Tags with commas"
-msgstr ""
-
 #: ../includes/wap8-portfolio-taxonomies.php:97
-msgid "Add or Remove Portfolio Tags"
+msgid "View Portfolio Tag"
 msgstr ""
 
 #: ../includes/wap8-portfolio-taxonomies.php:98
+msgid "Edit Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:99
+msgid "Update Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:100
+msgid "Add New Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:101
+msgid "New Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:102
+msgid "Separate Portfolio Tags with commas"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:103
+msgid "Add or Remove Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:104
 msgid "Choose from Most Used Portfolio Tags"
 msgstr ""
 

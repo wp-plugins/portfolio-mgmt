@@ -28,6 +28,7 @@ function wap8_register_services() {
 		'search_items'               => __( 'Search Services', 'wap8plugin-i18n' ),
 		'popular_items'              => __( 'Popular Services', 'wap8plugin-i18n' ),
 		'all_items'                  => __( 'All Services', 'wap8plugin-i18n' ),
+		'view_item'                  => __( 'View Service', 'wap8plugin-i18n' ),
 		'parent_item'                => __( 'Parent Service', 'wap8plugin-i18n' ),
 		'parent_item_colon'          => __( 'Parent Service:', 'wap8plugin-i18n' ),
 		'edit_item'                  => __( 'Edit Service', 'wap8plugin-i18n' ),
@@ -47,8 +48,12 @@ function wap8_register_services() {
 		'hierarchical'      => true,
 		'show_ui'           => true,
 		'show_in_nav_menus' => true,
-		'args'              => array( 'orderby' => 'term_order' ),
-		'rewrite'           => array( 'slug' => 'portfolio/services', 'with_front' => false ),
+		'args'              => array(
+			'orderby' => 'term_order'
+			),
+		'rewrite'           => array(
+			'slug'       => 'portfolio/services',
+			'with_front' => false ),
 		'query_var'         => true
 	);
 	
@@ -89,6 +94,7 @@ function wap8_register_portfolio_tags() {
 		'search_items'               => __( 'Search Portfolio Tags', 'wap8plugin-i18n' ),
 		'popular_items'              => __( 'Popular Portfolio Tags', 'wap8plugin-i18n' ),
 		'all_items'                  => __( 'All Portfolio Tags', 'wap8plugin-i18n' ),
+		'view_item'                  => __( 'View Portfolio Tag', 'wap8plugin-i18n' ),
 		'edit_item'                  => __( 'Edit Portfolio Tag', 'wap8plugin-i18n' ),
 		'update_item'                => __( 'Update Portfolio Tag', 'wap8plugin-i18n' ),
 		'add_new_item'               => __( 'Add New Portfolio Tag', 'wap8plugin-i18n' ),
@@ -107,8 +113,13 @@ function wap8_register_portfolio_tags() {
 		'show_ui'           => true,
 		'show_in_nav_menus' => true,
 		'show_tagcloud'     => false,
-		'args'              => array( 'orderby' => 'term_order' ),
-		'rewrite'           => array( 'slug' => 'portfolio/portfolio-tags', 'with_front' => false ),
+		'args'              => array(
+			'orderby' => 'term_order'
+			),
+		'rewrite'           => array(
+			'slug' => 'portfolio/portfolio-tags',
+			'with_front' => false
+			),
 		'query_var'         => true
 	);
 	
@@ -120,5 +131,3 @@ function wap8_register_portfolio_tags() {
 	);
 
 }
-
-?>

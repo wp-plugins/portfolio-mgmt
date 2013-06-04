@@ -45,5 +45,3 @@ function wap8_updated_portfolio_messages( $messages ) {
 	return $messages;
 
 }
-
-?>

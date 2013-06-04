@@ -25,6 +25,7 @@ function wap8_custom_portfolio_columns( $columns ) {
 
 	$columns = array(
 		'cb'                         => '<input type="checkbox" />',
+		'wap8-featured-image'        => __( 'Thumbnail', 'wap8plugin-i18n' ),
 		'title'                      => _x( __( 'Case Study', 'wap8plugin-i18n' ), 'column name' ),
 		'wap8-client-column'         => __( 'Client', 'wap8plugin-i18n' ),
 		'author'                     => __( 'Author', 'wap8plugin-i18n' ),
@@ -65,6 +66,22 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 	global $post;
 	
 	switch ( $column ) {
+		
+		case 'wap8-featured-image' : // featured image
+		
+			$image = get_the_post_thumbnail( $post->ID, array( 60, 60 ) ); // get the thumb version of the featured image
+			
+			if ( $image ) { // if an image has been set
+				
+				echo $image;
+				
+			} else { // no image has been set
+				
+				echo __( '<i>No thumbnail.</i>', 'wap8theme-i18n' );
+				
+			}
+			
+			break;
 		
 		case 'wap8-client-column' : // client column
 		
@@ -250,5 +267,3 @@ function wap8_sort_portfolio_clients( $vars ) {
 	return $vars;
 	
 }
-
-?>
