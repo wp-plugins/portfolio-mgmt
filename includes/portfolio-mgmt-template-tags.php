@@ -84,7 +84,7 @@ function wap8_list_services_nolink( $post_id ) {
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.1.0 Fixed an issue with the returned markup
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -93,7 +93,7 @@ function wap8_ul_services( $post_id ) {
 	
 	echo '<ul class="folio-services">' . "\n"; // opening unordered list tag
 	
-	echo get_the_term_list( $post_id, 'wap8-services', '<li>', '', '</li>' ) . "\n"; // echo a list of terms with each one wrapped with a list item tag
+	echo get_the_term_list( $post_id, 'wap8-services', '<li>', '</li><li>', '</li>' ) . "\n"; // echo a list of terms with each one wrapped with a list item tag
 	
 	echo '</ul>' . "\n"; // closing unordered list tag
 	

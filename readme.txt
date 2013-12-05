@@ -2,9 +2,9 @@
 Contributors: wearepixel8
 Tags: custom post type, portfolio, post type, widget
 Requires at least: 3.5
-Compatible up to: 3.6
-Tested up to: 3.6
-Stable tag: 1.0.9
+Compatible up to: 3.7.1
+Tested up to: 3.7.1
+Stable tag: 1.1.0
 License: GPLv2
 
 Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
@@ -92,7 +92,19 @@ Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most re
 * Improved data sanitization for custom meta box
 * Plugin documentation is now a tabbed submenu item
 
+= 1.0.9 =
+* Fixed a WP_DEBUG error occurring in custom meta box
+
+= 1.1.0 =
+* Fixed an issue with the Unordered List of Services with Links returning incorrect markup.
+
 == Upgrade Notice ==
 
-= 1.0.8=
+= 1.0.8 =
 Added filters so themes and other plugins can amend the custom post type and custom taxonomy arguments.
+
+= 1.0.9 =
+* Fixed a WP_DEBUG error occurring in custom meta box
+
+= 1.1.0 =
+Fixed an issue with the Unordered List of Services with Links returning incorrect markup.
