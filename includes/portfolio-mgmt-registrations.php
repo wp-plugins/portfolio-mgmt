@@ -147,7 +147,7 @@ function wap8_portfolio_tags() {
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.8 Allow $args to be filtered by theme or plugin
+ * @since 1.1.1 Updated the menu icon
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -195,6 +195,7 @@ function wap8_portfolio() {
 		'hierarchical'       => false,
 		'has_archive'        => true,
 		'menu_position'      => 5,
+		'menu_icon'          => 'dashicons-art',
 		'supports'           => $supports
 	);
 	
@@ -260,45 +261,6 @@ register_deactivation_hook( __FILE__, 'wap8_portfolio_mgmt_deactivation', 10 );
 
 function wap8_portfolio_mgmt_deactivation() {
 	flush_rewrite_rules();
-}
-
-/*----------------------------------------------------------------------------*/
-/* Portfolio Mgmt. Icons
-/*----------------------------------------------------------------------------*/
-
-add_action( 'admin_head', 'wap8_portfolio_mgmt_icons', 10 );
-
-/**
- * Portfolio Mgmt. Icons
- *
- * Add custom icons to the WordPress dashboard.
- *
- * @package Portfolio Mgmt.
- * @version 1.0.0
- * @since 1.0.8 Switch out menu icon and add edit icon
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
- *
- */
-
-function wap8_portfolio_mgmt_icons() {
-	?>
-	<style type="text/css" media="screen">
-	#menu-posts-wap8-portfolio .wp-menu-image {
-		background-image: url(<?php echo plugin_dir_url( dirname( __FILE__ ) ); ?>images/portfolio-mgmt-16.png) !important;
-		background-position: 6px -18px !important;
-		background-repeat: no-repeat;
-	}
-	#menu-posts-wap8-portfolio:hover .wp-menu-image,
-	#menu-posts-wap8-portfolio.wp-has-current-submenu .wp-menu-image {
-		background-position: 6px 6px !important;
-	}
-	#icon-edit.icon32-posts-wap8-portfolio {
-		background-image: url(<?php echo plugin_dir_url( dirname( __FILE__ ) ); ?>images/portfolio-mgmt-32.png);
-		background-position: 0 0;
-		background-repeat: no-repeat;
-	}
-	</style>
-	<?php
 }
 
 /*-----------------------------------------------------------------------------------*/

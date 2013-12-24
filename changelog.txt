@@ -64,3 +64,8 @@ Portfolio Mgmt. 1.1.0
 =====================
 
 * Fixed an issue with the Unordered List of Services with Links returning incorrect markup.
+
+Portfolio Mgmt. 1.1.1
+=====================
+
+* Updated the menu icon
