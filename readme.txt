@@ -23,6 +23,7 @@ With Portfolio Mgmt., you can bring the power of portfolio content management to
 Please see the WordPress Codex for detailed information about template hierarchies at http://codex.wordpress.org/Template_Hierarchy.
 
 **Translations**
+
 * Serbo-Croatian by [Borisa Djuraskovic/Web Hosting Hub](http://www.webhostinghub.com)
 
 == Installation ==
