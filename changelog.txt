@@ -69,3 +69,8 @@ Portfolio Mgmt. 1.1.1
 =====================
 
 * Updated the menu icon
+
+Portfolio Mgmt. 1.1.2
+=====================
+
+* Added Serbo-Croatian translation

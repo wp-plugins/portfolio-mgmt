@@ -4,7 +4,7 @@ Tags: custom post type, portfolio, post type, widget
 Requires at least: 3.5
 Compatible up to: 3.8
 Tested up to: 3.8
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2
 
 Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
@@ -21,6 +21,9 @@ With Portfolio Mgmt., you can bring the power of portfolio content management to
 * `taxonomy-wap8-portfolio-tags.php` - This template should be used for customized Portfolio Tags taxonomy view.
 	
 Please see the WordPress Codex for detailed information about template hierarchies at http://codex.wordpress.org/Template_Hierarchy.
+
+**Translations**
+* Serbo-Croatian by [Borisa Djuraskovic/Web Hosting Hub](http://www.webhostinghub.com)
 
 == Installation ==
 
@@ -111,3 +114,6 @@ Added filters so themes and other plugins can amend the custom post type and cus
 
 = 1.1.1 =
 * Updated the menu icon.
+
+= 1.1.2 =
+* Added Serbo-Croatian translation.
