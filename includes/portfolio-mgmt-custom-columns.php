@@ -63,7 +63,7 @@ add_action( 'manage_wap8-portfolio_posts_custom_column', 'wap8_portfolio_columns
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.8 Removed the custom columns for custom taxonomies. Added column for featured case studies.
+ * @since 1.1.3 Updated the feature column star graphic
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -96,7 +96,7 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 			
 			if ( $featured == 1 ) { // the current post has been marked as featured
 				
-				echo '<img src="' . plugin_dir_url( dirname( __FILE__ ) ) . 'images/star.png">';
+				echo '<img src="' . plugin_dir_url( dirname( __FILE__ ) ) . 'images/star.png" style="width: 16px; height: 16px;">';
 				
 			}
 			

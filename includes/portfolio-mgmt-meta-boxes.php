@@ -38,7 +38,7 @@ function wap8_add_portfolio_meta_boxes() {
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.7 Add featured case study checkbox
+ * @since 1.1.3 Fixed form text inputs in custom meta box so they are now responsive
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -65,17 +65,17 @@ function wap8_portfolio_case_info_cb( $post ) {
 	
 	<p>
 		<label for="wap8-client-name"><?php _e( 'Client Name', 'wap8plugin-i18n' ); ?></label><br />
-		<input type="text" id="wap8-client-name" name="_wap8_client_name" size="30" value="<?php echo esc_attr( $client ); ?>" />
+		<input type="text" id="wap8-client-name" name="_wap8_client_name" value="<?php echo esc_attr( $client ); ?>" />
 	</p>
 	
 	<p>
 		<label for="wap8-project-url"><?php _e( 'Project URL', 'wap8plugin-i18n' ); ?></strong><br />
-		<input type="text" id="wap8-project-url" name="_wap8_project_url" size="30" value="<?php echo esc_attr( $project_url ) ?>" /><br />
+		<input type="text" id="wap8-project-url" name="_wap8_project_url" value="<?php echo esc_attr( $project_url ) ?>" /><br />
 	</p>
 	
 	<p>
 		<label for="wap8-project-url-text"><?php _e( 'Project URL Text', 'wap8plugin-i18n' ); ?></label><br />
-		<input type="text" id="wap8-project-url-text" name="_wap8_project_url_text" size="30" value="<?php echo esc_attr( $project_url_text ); ?>" /><br />
+		<input type="text" id="wap8-project-url-text" name="_wap8_project_url_text" value="<?php echo esc_attr( $project_url_text ); ?>" /><br />
 	</p>
 	
 	<p><?php _e( 'If your currently active theme does not already display this content, please click on the Help tab above for detailed instructions.', 'wap8plugin-i18n' ); ?></p>
