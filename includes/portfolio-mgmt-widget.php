@@ -13,7 +13,7 @@ add_action( 'widgets_init', 'wap8_portfolio_widget', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.7 Added option for displaying featured case studies only
+ * @since 1.1.4 Fixed undefined index errors
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -46,11 +46,12 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		extract( $args );
 		
 		// saved widget settings
-		$title           = apply_filters( 'widget_title', $instance['title'] ); // saved widget title
-		$studies_count   = $instance['studies_count'];                          // saved amount of posts to display
-		$studies_thumb   = $instance['studies_thumb'];                          // saved featured thumbnail setting
-		$studies_title   = $instance['studies_title'];                          // saved case study title setting
-		$studies_feature = $instance['studies_feature'];                        // saved featured case studies setting
+		$title           = isset( $instance['title'] ) ? $instance['title'] : __( 'Recent Case Studies', 'wap8plugin-i18n' );
+		$title           = apply_filters( 'widget_title', $title );
+		$studies_count   = isset( $instance['studies_count'] ) ? $instance['studies_count'] : 5;
+		$studies_thumb   = isset( $instance['studies_thumb'] ) ? $instance['studies_thumb'] : 0;
+		$studies_title   = isset( $instance['studies_title'] ) ? $instance['studies_title'] : 0;
+		$studies_feature = isset( $instance['studies_feature'] ) ? $instance['studies_feature'] : 0;
 		
 		echo $before_widget; // echo HTML set in register_sidebar by the currently active theme
 		
@@ -69,7 +70,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 				'meta_value'     => '1',
 				'posts_per_page' => $studies_count,
 				'orderby'        => 'date',
-				'order'	         => 'DESC'
+				'order'	         => 'DESC',
 			);
 		} else {
 			$args = array(
@@ -77,7 +78,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 				'post_status'    => 'publish',
 				'posts_per_page' => $studies_count,
 				'orderby'        => 'date',
-				'order'	         => 'DESC'
+				'order'	         => 'DESC',
 			);
 		}
 		
@@ -165,11 +166,11 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<input id="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>" name="<?php echo $this -> get_field_name( 'studies_thumb' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_thumb'] ) ? $instance['studies_thumb'] : 0); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>"><?php _e( 'Display featured thumbnail', 'wap8plugin-i18n' ); ?></label>
+			<input id="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>" name="<?php echo $this -> get_field_name( 'studies_thumb' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_thumb'] ) ? $instance['studies_thumb'] : 0 ); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>"><?php _e( 'Display featured thumbnail', 'wap8plugin-i18n' ); ?></label>
 		</p>
 		
 		<p>
-			<input id="<?php echo $this -> get_field_id( 'studies_title' ); ?>" name="<?php echo $this -> get_field_name( 'studies_title' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_title'] ) ? $instance['studies_title'] : 0); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_title' ); ?>"><?php _e( 'Display case study title', 'wap8plugin-i18n' ); ?></label>
+			<input id="<?php echo $this -> get_field_id( 'studies_title' ); ?>" name="<?php echo $this -> get_field_name( 'studies_title' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_title'] ) ? $instance['studies_title'] : 0 ); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_title' ); ?>"><?php _e( 'Display case study title', 'wap8plugin-i18n' ); ?></label>
 		</p>
 		
 		<p>
