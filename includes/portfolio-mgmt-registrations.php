@@ -1,5 +1,4 @@
 <?php
-
 /*----------------------------------------------------------------------------*/
 /* Actions & Hooks
 /*----------------------------------------------------------------------------*/
@@ -20,13 +19,13 @@ add_action( 'init', 'wap8_portfolio', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.8 Allow $args to be filtered by theme or plugin
+ * @since 1.1.5 Fixed incorrect text domain
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
 
 function wap8_portfolio_services() {
-	
+
 	$labels = array(
 		'name'                       => _x( 'Services', 'taxonomy general name', 'wap8plugin-i18n' ),
 		'singular_name'              => _x( 'Service', 'taxonomy singular name', 'wap8plugin-i18n' ),
@@ -43,9 +42,9 @@ function wap8_portfolio_services() {
 		'separate_items_with_commas' => __( 'Separate Services with commas', 'wap8plugin-i18n' ),
 		'add_or_remove_items'        => __( 'Add or remove Services', 'wap8plugin-i18n' ),
 		'choose_from_most_used'      => __( 'Choose from Most Used Services', 'wap8plugin-i18n' ),
-		'not_found'                  => __( 'No Services found.', 'wap8theme-i18n' )
+		'not_found'                  => __( 'No Services found.', 'wap8plugin-i18n' ),
 	);
-	
+
 	$args = array(
 		'labels'            => $labels,
 		'public'            => true,
@@ -59,18 +58,18 @@ function wap8_portfolio_services() {
 		'rewrite'           => array(
 			'slug'       => 'portfolio/services',
 			'with_front' => false ),
-		'query_var'         => true
+		'query_var'         => true,
 	);
-	
+
 	$args = apply_filters( 'portfolio_mgmt_services_args', $args );
-	
+
 	// register services as a custom taxonomy
 	register_taxonomy(
 		'wap8-services',  // unique handle to avoid potential conflicts
 		'wap8-portfolio', // this custom taxonomy should only be associated with our custom post type registered in wap8-portfolio-registration.php
 		$args             // array of arguments for this custom taxonomy
 	);
-	
+
 }
 
 /*----------------------------------------------------------------------------*/
@@ -90,7 +89,7 @@ function wap8_portfolio_services() {
  */
 
 function wap8_portfolio_tags() {
-	
+
 	$labels = array(
 		'name'                       => _x( 'Portfolio Tags', 'taxonomy general name', 'wap8plugin-i18n' ),
 		'singular_name'              => _x( 'Portfolio Tag', 'taxonomy singular name', 'wap8plugin-i18n'),
@@ -105,9 +104,9 @@ function wap8_portfolio_tags() {
 		'separate_items_with_commas' => __( 'Separate Portfolio Tags with commas', 'wap8plugin-i18n' ),
 		'add_or_remove_items'        => __( 'Add or Remove Portfolio Tags', 'wap8plugin-i18n' ),
 		'choose_from_most_used'      => __( 'Choose from Most Used Portfolio Tags', 'wap8plugin-i18n' ),
-		'not_found'                  => __( 'No Portfolio Tags found.', 'wap8plugin-i18n' )
+		'not_found'                  => __( 'No Portfolio Tags found.', 'wap8plugin-i18n' ),
 	);
-	
+
 	$args = array(
 		'labels'            => $labels,
 		'public'            => true,
@@ -120,20 +119,20 @@ function wap8_portfolio_tags() {
 			),
 		'rewrite'           => array(
 			'slug'       => 'portfolio/portfolio-tags',
-			'with_front' => false
+			'with_front' => false,
 			),
-		'query_var'         => true
+		'query_var'         => true,
 	);
-	
+
 	$args = apply_filters( 'portfolio_mgmt_portfolio_tag_args', $args );
-	
+
 	// register portfolio tags as a custom taxonomy
 	register_taxonomy(
 		'wap8-portfolio-tags', // unique handle to avoid potential conflicts
 		'wap8-portfolio',      // this custom taxonomy should only be associated with our custom post type registered in wap8-portfolio-registration.php
 		$args                  // array of arguments for this custom taxonomy
 	);
-	
+
 }
 
 /*----------------------------------------------------------------------------*/
@@ -153,7 +152,7 @@ function wap8_portfolio_tags() {
  */
 
 function wap8_portfolio() {
-	
+
 	$labels = array(
 		'name'               => _x( 'Portfolio', 'post type general name', 'wap8plugin-i18n' ),
 		'singular_name'      => _x( 'Portfolio', 'post type singular name', 'wap8plugin-i18n' ),
@@ -167,18 +166,18 @@ function wap8_portfolio() {
 		'view_item'          => __( 'View Case Study', 'wap8plugin-i18n' ),
 		'search_items'       => __( 'Search Portfolio', 'wap8plugin-i18n' ),
 		'not_found'          => __( 'No Case Studies found', 'wap8plugin-i18n' ),
-		'not_found_in_trash' => __( 'No Case Studies found in Trash', 'wap8plugin-i18n' )
+		'not_found_in_trash' => __( 'No Case Studies found in Trash', 'wap8plugin-i18n' ),
 	);
-	
+
 	$supports = array(
 		'title',
 		'editor',
 		'thumbnail',
 		'excerpt',
 		'revisions',
-		'author'
+		'author',
 	);
-	
+
 	$args = array(
 		'labels'             => $labels,
 		'public'             => true,
@@ -196,17 +195,17 @@ function wap8_portfolio() {
 		'has_archive'        => true,
 		'menu_position'      => 5,
 		'menu_icon'          => 'dashicons-art',
-		'supports'           => $supports
+		'supports'           => $supports,
 	);
-	
+
 	$args = apply_filters( 'portfolio_mgmt_args', $args );
-	
+
 	// register the post type
 	register_post_type(
 		'wap8-portfolio', // unique post type handle to avoid any potential conflicts
 		$args             // array of arguments for this custom post type
 	);
-	
+
 }
 
 /*----------------------------------------------------------------------------*/
@@ -226,19 +225,19 @@ function wap8_portfolio() {
  */
 
 function wap8_portfolio_mgmt_activation() {
-	
+
 	// wap8-services custom taxonomy
 	wap8_portfolio_services();
-	
+
 	// wap8-portfolio-tgs custom taxonomy
 	wap8_portfolio_tags();
-	
+
 	// custom post type
 	wap8_portfolio();
-	
+
 	// flush rewrite rules
 	flush_rewrite_rules();
-	
+
 }
 
 /*----------------------------------------------------------------------------*/
@@ -279,7 +278,7 @@ add_filter( 'enter_title_here', 'wap8_portfolio_mgmt_title_field_label', 10, 1 )
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.1.5 Accounting for filtered post type arguments
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -287,13 +286,16 @@ add_filter( 'enter_title_here', 'wap8_portfolio_mgmt_title_field_label', 10, 1 )
 function wap8_portfolio_mgmt_title_field_label( $title ) {
 
 	$screen = get_current_screen();
-	
+
 	if ( 'wap8-portfolio' == $screen->post_type ) {
-	
-		$title = __( 'Case Study Title', 'wap8plugin-i18n' );
-	
+
+		$portfolio       = get_post_type_object( 'wap8-portfolio' );
+		$portfolio_label = $portfolio->labels->singular_name;
+
+		$title = $portfolio_label . __( ' Title', 'wap8plugin-i18n' );
+
 	}
-	
+
 	return $title;
 
 }
@@ -317,11 +319,11 @@ add_action( 'init', 'wap8_portfolio_mgmt_post_thumbnail', 10 );
  */
 
 function wap8_portfolio_mgmt_post_thumbnail() {
-	
+
 	if ( !current_theme_supports( 'post-thumbnails' ) ) { // if the currently active theme does not support post-thumbnails
-		
+
 		add_theme_support( 'post-thumbnail', array( 'wap8-portfolio' ) ); // add theme support for post-thumbnails for the custom post type only
-		
+
 	}
-	
+
 }

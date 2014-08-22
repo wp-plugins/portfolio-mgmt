@@ -1,16 +1,16 @@
 <?php
-
 /*
 Plugin Name: Portfolio Mgmt.
-Plugin URI: http://www.wearepixel8.com/plugins/portfolio-mgmt/
+Plugin URI: http://heavyheavy.com
 Description: Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
-Version: 1.1.4
-Author: We Are Pixel8
-Author URI: http://www.wearepixel8.com
+Version: 1.1.5
+Author: Heavy Heavy
+Author URI: http://heavyheavy.com
+Contributors: We Are Pixel8
 Text Domain: wap8plugin-i18n
 Domain Path: /languages
 License:
-	Copyright 2012 - 2013 We Are Pixel8 <hello@wearepixel8.com>
+	Copyright 2012 - 2014 Heavy Heavy <hello@heavyheavy.com>
 	
 	This program is free software; you can redistribute it and/or modify it under
 	the terms of the GNU General Public License, version 2, as published by the Free
@@ -67,13 +67,13 @@ add_filter( 'plugin_action_links', 'wap8_portfolio_mgmt_doc_link', 10, 2 );
  */
 
 function wap8_portfolio_mgmt_doc_link( $links, $file ) {
-	
+
 	if ( $file == plugin_basename( __FILE__ ) && current_user_can( 'edit_posts' ) ) {
 		$links[] = '<a href="' . admin_url( 'edit.php?post_type=wap8-portfolio&page=wap8-portfolio-documentation' ) . '">' . __( 'Documentation', 'wap8plugin-i18n' ) . '</a>';
 	}
-	
+
 	return $links;
-	
+
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -95,7 +95,7 @@ add_action( 'plugins_loaded', 'wap8_portfolio_text_domain', 10 );
  */
 
 function wap8_portfolio_text_domain() {
-	
+
 	load_plugin_textdomain( 'wap8plugin-i18n', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-	
+
 }

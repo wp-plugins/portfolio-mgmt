@@ -85,3 +85,10 @@ Portfolio Mgmt. 1.1.4
 =====================
 
 * Fixed undefined index errors in widget
+
+Portfolio Mgmt. 1.1.5
+=====================
+
+* Properly escaping text being output in the admin
+* Accounting for filtered post type arguments throughout the admin
+* Updated language file
