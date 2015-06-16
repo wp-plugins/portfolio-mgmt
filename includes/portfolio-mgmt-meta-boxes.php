@@ -13,7 +13,7 @@ add_action( 'add_meta_boxes', 'wap8_add_portfolio_meta_boxes', 10 );
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavycoe>
  *
  */
 
@@ -22,7 +22,7 @@ function wap8_add_portfolio_meta_boxes() {
 	$portfolio       = get_post_type_object( 'wap8-portfolio' );
 	$portfolio_label = $portfolio->labels->singular_name;
 
-	add_meta_box( 'wap8-portfolio-case-info', $portfolio_label . __( ' Information', 'wap8plugin-i18n' ), 'wap8_portfolio_case_info_cb', 'wap8-portfolio', 'side', 'high' );
+	add_meta_box( 'wap8-portfolio-case-info', $portfolio_label . __( ' Information', 'portfolio-mgmt' ), 'wap8_portfolio_case_info_cb', 'wap8-portfolio', 'side', 'high' );
 
 }
 
@@ -41,7 +41,7 @@ function wap8_add_portfolio_meta_boxes() {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.3 Fixed form text inputs in custom meta box so they are now responsive
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -60,31 +60,31 @@ function wap8_portfolio_case_info_cb( $post ) {
 	$portfolio_label = $portfolio->labels->singular_name;
 
 	printf(
-		__( '<p>%s information is optional meta data that can be used by your theme.</p>', 'wap8plugin-i18n' ),
+		__( '<p>%s information is optional meta data that can be used by your theme.</p>', 'portfolio-mgmt' ),
 		esc_html( $portfolio_label )
 	); ?>
 
 	<p>
 		<input id="wap8-portfolio-feature" name="_wap8_portfolio_feature" type="checkbox" value="1" <?php checked( $feature_case ); ?> />
-		<label for="wap8-portfolio-feature"><?php printf( __( 'Feature this %s', 'wap8plugin-i18n' ), esc_html( $portfolio_label ) ); ?></label>
+		<label for="wap8-portfolio-feature"><?php printf( __( 'Feature this %s', 'portfolio-mgmt' ), esc_html( $portfolio_label ) ); ?></label>
 	</p>
 
 	<p>
-		<label for="wap8-client-name"><?php _e( 'Client Name', 'wap8plugin-i18n' ); ?></label><br />
+		<label for="wap8-client-name"><?php _e( 'Client Name', 'portfolio-mgmt' ); ?></label><br />
 		<input type="text" id="wap8-client-name" name="_wap8_client_name" value="<?php echo esc_attr( $client ); ?>" />
 	</p>
 
 	<p>
-		<label for="wap8-project-url"><?php _e( 'Project URL', 'wap8plugin-i18n' ); ?></strong><br />
+		<label for="wap8-project-url"><?php _e( 'Project URL', 'portfolio-mgmt' ); ?></strong><br />
 		<input type="text" id="wap8-project-url" name="_wap8_project_url" value="<?php echo esc_attr( $project_url ) ?>" /><br />
 	</p>
 
 	<p>
-		<label for="wap8-project-url-text"><?php _e( 'Project URL Text', 'wap8plugin-i18n' ); ?></label><br />
+		<label for="wap8-project-url-text"><?php _e( 'Project URL Text', 'portfolio-mgmt' ); ?></label><br />
 		<input type="text" id="wap8-project-url-text" name="_wap8_project_url_text" value="<?php echo esc_attr( $project_url_text ); ?>" /><br />
 	</p>
 
-	<p><?php _e( 'If your currently active theme does not already display this content, please click on the Help tab above for detailed instructions.', 'wap8plugin-i18n' ); ?></p>
+	<p><?php _e( 'If your currently active theme does not already display this content, please click on the Help tab above for detailed instructions.', 'portfolio-mgmt' ); ?></p>
 
 	<?php
 
@@ -106,7 +106,7 @@ add_action( 'save_post', 'wap8_save_portfolio_meta', 10 );
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.8 Improve data sanitization
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 

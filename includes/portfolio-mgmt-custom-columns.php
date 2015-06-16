@@ -16,7 +16,7 @@ add_filter( 'manage_edit-wap8-portfolio_columns', 'wap8_custom_portfolio_columns
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.5 Properly escaping the text being output in the columns.
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -32,14 +32,14 @@ function wap8_custom_portfolio_columns( $columns ) {
 
 	$columns = array(
 		'cb'                         => '<input type="checkbox" />',
-		'wap8-featured-image'        => __( 'Thumbnail', 'wap8plugin-i18n' ),
-		'wap8-featured-column'       => __( 'Featured', 'wap8plugin-i18n' ),
+		'wap8-featured-image'        => __( 'Thumbnail', 'portfolio-mgmt' ),
+		'wap8-featured-column'       => __( 'Featured', 'portfolio-mgmt' ),
 		'title'                      => esc_html( $portfolio_label ),
-		'wap8-client-column'         => __( 'Client', 'wap8plugin-i18n' ),
+		'wap8-client-column'         => __( 'Client', 'portfolio-mgmt' ),
 		'wap8-services-column'       => esc_html( $services_label ),
 		'wap8-portfolio-tags-column' => esc_html( $tags_label ),
-		'author'                     => __( 'Author', 'wap8plugin-i18n' ),
-		'date'                       => _x( __( 'Date', 'wap8plugin-i18n' ), 'column name' ),
+		'author'                     => __( 'Author', 'portfolio-mgmt' ),
+		'date'                       => _x( __( 'Date', 'portfolio-mgmt' ), 'column name' ),
 	);
 
 	return $columns;
@@ -65,7 +65,7 @@ add_action( 'manage_wap8-portfolio_posts_custom_column', 'wap8_portfolio_columns
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.5 Added a check for filtered post type labels
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -85,7 +85,7 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 
 			} else { // no image has been set
 
-				echo __( '<i>No thumbnail.</i>', 'wap8theme-i18n' );
+				echo __( '<i>No thumbnail.</i>', 'portfolio-mgmt' );
 
 			}
 
@@ -113,7 +113,7 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 
 			} else { // no client name has been set
 
-				echo __( '<i>No Client.</i>', 'wap8plugin-i18n' );
+				echo __( '<i>No Client.</i>', 'portfolio-mgmt' );
 
 			}
 
@@ -150,7 +150,7 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 				$services_label     = $portfolio_services->labels->name;
 
 				printf(
-					__( '<i>No %s.</i>', 'wap8plugin-i18n' ),
+					__( '<i>No %s.</i>', 'portfolio-mgmt' ),
 					esc_html( $services_label )
 				);
 
@@ -189,7 +189,7 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 				$tags_label     = $portfolio_tags->labels->name;
 
 				printf(
-					__( '<i>No %s.</i>', 'wap8plugin-i18n' ),
+					__( '<i>No %s.</i>', 'portfolio-mgmt' ),
 					esc_html( $tags_label )
 				);
 
@@ -234,68 +234,37 @@ function wap8_portfolio_sortable_columns( $columns ) {
 }
 
 /*----------------------------------------------------------------------------*/
-/* Portfolio Edit Load
+/* Portfolio Sortable Columns
 /*----------------------------------------------------------------------------*/
 
-add_action( 'load-edit.php', 'wap8_portfolio_edit_load', 10 );
+add_action( 'pre_get_posts', 'wap8_portfolio_manage_sortable_columns', 10, 1 );
 
 /**
- * Portfolio Edit Load
+ * Manage Sortable Columns
  *
- * Using the load-edit hook to insure we are on the edit.php screen. If so, add
- * our custom filter to request.
+ * Sort our custom column.
+ *
+ * @param $query
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @since 1.1.6
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
-function wap8_portfolio_edit_load() {
+function wap8_portfolio_manage_sortable_columns( $query ) {
 
-	add_filter( 'request', 'wap8_sort_portfolio_clients', 10, 1 );
+	if ( !is_admin() )
+		return;
 
-}
-
-/*----------------------------------------------------------------------------*/
-/* Sort Portfolio Clients
-/*----------------------------------------------------------------------------*/
-
-/**
- * Sort Portfolio Clients
- *
- * If we are sorting the client column, sort _wap8_client_name by meta_value.
- *
- * @param $vars
- *
- * @package Portfolio Mgmt.
- * @version 1.0.0
- * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
- *
- */
-
-function wap8_sort_portfolio_clients( $vars ) {
-
-	if ( isset( $vars['post_type'] ) && 'wap8-portfolio' == $vars['post_type'] ) { // if we are viewing the portfolio post type
-
-		if ( isset( $vars['orderby'] ) && 'wap8-client-column' == $vars['orderby'] ) { // if we are ordering by client
-
-			$vars =
-
-				array_merge(
-					$vars,
-						array(
-							'meta_key' => '_wap8_client_name',
-							'orderby'  => 'meta_value',
-					)
-				);
-
+	if ( $query->is_main_query() && ( $orderby = $query->get( 'orderby' ) ) ) {
+		switch( $orderby ) {
+			case 'wap8-client-column' :
+				$query->set( 'meta_key', '_wap8_client_name' );
+				$query->set( 'orderby', 'meta_value' );
+			break;
 		}
-
 	}
-
-	return $vars;
 
 }

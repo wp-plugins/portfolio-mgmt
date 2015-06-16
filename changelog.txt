@@ -92,3 +92,9 @@ Portfolio Mgmt. 1.1.5
 * Properly escaping text being output in the admin
 * Accounting for filtered post type arguments throughout the admin
 * Updated language file
+
+Portfolio Mgmt. 1.1.6
+=====================
+
+* Fixed an issue that prevented the Clients column from being sortable in the dashboard
+* Fixed inconsistencies in text domain name space

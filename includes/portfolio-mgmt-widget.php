@@ -13,7 +13,7 @@ add_action( 'widgets_init', 'wap8_portfolio_widget', 10 );
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.4 Fixed undefined index errors
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -32,13 +32,13 @@ class wap8_Portfolio_Widget extends WP_Widget {
 
 		$widget_ops = array(
 			'classname'   => 'wap8-portfolio-widget',
-			'description' => __( 'Display recent portfolio posts.', 'wap8plugin-i18n' ),
+			'description' => __( 'Display recent portfolio posts.', 'portfolio-mgmt' ),
 			);
 
-		$this->WP_Widget( 'wap8-Portfolio-widget', __( 'Recent Portfolio Posts', 'wap8plugin-i18n' ), $widget_ops );	
+		$this->WP_Widget( 'wap8-Portfolio-widget', __( 'Recent Portfolio Posts', 'portfolio-mgmt' ), $widget_ops );	
 
 	}
-	
+
 	// widget output
 	function widget( $args, $instance ) {
 
@@ -105,7 +105,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 
 		else : // if the custom query did not find posts
 
-			echo "<p>" . __( 'There are no published case studies.', 'wap8plugin-i18n' ) . "</p>\n";
+			echo "<p>" . __( 'There are no published case studies.', 'portfolio-mgmt' ) . "</p>\n";
 
 		endif; // end the custom query
 
@@ -129,7 +129,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		return $instance;
 
 	}
-	
+
 	// widget form
 	function form( $instance ) {
 		$defaults = array(
@@ -151,25 +151,25 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		} ?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'wap8plugin-i18n' ); ?></label><br />
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'portfolio-mgmt' ); ?></label><br />
 			<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] );?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'studies_count' ); ?>"><?php _e( 'Posts to show', 'wap8plugin-i18n' ); ?></label>
-			<input type="text" id="<?php echo $this->get_field_id( 'studies_count' ); ?>" name="<?php echo $this->get_field_name( 'studies_count' ); ?>" value="<?php echo $instance['studies_count'];?>" size="3" maxlength="2" /> <small><?php _e( 'Max: 10', 'wap8plugin-i18n' ); ?></small>
+			<label for="<?php echo $this->get_field_id( 'studies_count' ); ?>"><?php _e( 'Posts to show', 'portfolio-mgmt' ); ?></label>
+			<input type="text" id="<?php echo $this->get_field_id( 'studies_count' ); ?>" name="<?php echo $this->get_field_name( 'studies_count' ); ?>" value="<?php echo $instance['studies_count'];?>" size="3" maxlength="2" /> <small><?php _e( 'Max: 10', 'portfolio-mgmt' ); ?></small>
 		</p>
 
 		<p>
-			<input id="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>" name="<?php echo $this -> get_field_name( 'studies_thumb' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_thumb'] ) ? $instance['studies_thumb'] : 0 ); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>"><?php _e( 'Display featured thumbnail', 'wap8plugin-i18n' ); ?></label>
+			<input id="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>" name="<?php echo $this -> get_field_name( 'studies_thumb' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_thumb'] ) ? $instance['studies_thumb'] : 0 ); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_thumb' ); ?>"><?php _e( 'Display featured thumbnail', 'portfolio-mgmt' ); ?></label>
 		</p>
 
 		<p>
-			<input id="<?php echo $this -> get_field_id( 'studies_title' ); ?>" name="<?php echo $this -> get_field_name( 'studies_title' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_title'] ) ? $instance['studies_title'] : 0 ); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_title' ); ?>"><?php _e( 'Display title', 'wap8plugin-i18n' ); ?></label>
+			<input id="<?php echo $this -> get_field_id( 'studies_title' ); ?>" name="<?php echo $this -> get_field_name( 'studies_title' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_title'] ) ? $instance['studies_title'] : 0 ); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_title' ); ?>"><?php _e( 'Display title', 'portfolio-mgmt' ); ?></label>
 		</p>
 
 		<p>
-			<input id="<?php echo $this->get_field_id( 'studies_feature' ); ?>" name="<?php echo $this->get_field_name( 'studies_feature' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_feature'] ) ? $instance['studies_feature'] : 0 ); ?> />&nbsp;<label for="<?php echo $this->get_field_id( 'studies_feature' ); ?>"><?php _e( 'Featured Posts Only', 'wap8plugin-i18n' ); ?></label>
+			<input id="<?php echo $this->get_field_id( 'studies_feature' ); ?>" name="<?php echo $this->get_field_name( 'studies_feature' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_feature'] ) ? $instance['studies_feature'] : 0 ); ?> />&nbsp;<label for="<?php echo $this->get_field_id( 'studies_feature' ); ?>"><?php _e( 'Featured Posts Only', 'portfolio-mgmt' ); ?></label>
 		</p>
 
 		<?php	

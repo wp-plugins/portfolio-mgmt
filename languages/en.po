@@ -1,0 +1,678 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portfolio Mgmt.\n"
+"POT-Creation-Date: 2015-06-15 21:07-0600\n"
+"PO-Revision-Date: 2015-06-15 21:07-0600\n"
+"Last-Translator: Heavy Heavy <hello@heavyheavy.com>\n"
+"Language-Team: Heavy Heavy <hello@heavyheavy.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: portfolio-mgmt.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/portfolio-mgmt-custom-columns.php:35
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/portfolio-mgmt-custom-columns.php:36
+msgid "Featured"
+msgstr ""
+
+#: includes/portfolio-mgmt-custom-columns.php:38
+msgid "Client"
+msgstr ""
+
+#: includes/portfolio-mgmt-custom-columns.php:41
+msgid "Author"
+msgstr ""
+
+#: includes/portfolio-mgmt-custom-columns.php:42
+msgid "Date"
+msgstr ""
+
+#: includes/portfolio-mgmt-custom-columns.php:88
+msgid "<i>No thumbnail.</i>"
+msgstr ""
+
+#: includes/portfolio-mgmt-custom-columns.php:116
+msgid "<i>No Client.</i>"
+msgstr ""
+
+#: includes/portfolio-mgmt-custom-columns.php:153
+#: includes/portfolio-mgmt-custom-columns.php:192
+#, php-format
+msgid "<i>No %s.</i>"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:21 includes/portfolio-mgmt-doc.php:81
+msgid "Optional Templates"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:22
+msgid "Custom Meta"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:23 includes/portfolio-mgmt-doc.php:143
+#: includes/portfolio-mgmt-help-tabs.php:72
+#: includes/portfolio-mgmt-help-tabs.php:163
+msgid "Template Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:24
+msgid "Customization"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:61 includes/portfolio-mgmt-doc.php:274
+msgid "Portfolio Mgmt. Documentation"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:63
+#, php-format
+msgid ""
+"Thank you for downloading and installing our Portfolio Mgmt. plugin. This "
+"plugin was developed by <a href=\"%s\" target=\"_blank\">We Are Pixel8</a>, "
+"a custom WordPress theme shop, as an out of the box solution for portfolio "
+"content management within a WordPress website."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:65
+#, php-format
+msgid ""
+"This plugin registers a custom post type developed specifically for "
+"organizing and displaying your portfolio posts. Portfolio Manager will also "
+"register custom taxonomies for Services and Portfolio Tags, supports "
+"<code>post-thumbnails</code> and comes with a custom widget for displaying "
+"recent portfolio posts in <a href=\"%s\">your widget ready areas</a>."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:83
+#, php-format
+msgid ""
+"If your currently active theme does not contain the following optional "
+"templates, the next available default template, in <a href=\"%s\" target="
+"\"_blank\">the WordPress template hierarchy</a>, will be used."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:88
+msgid "Single Portfolio"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:92
+msgid "Portfolio Archive"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:96
+msgid "Services Archive"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:100
+msgid "Portfolio Tags Archive"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:110
+#: includes/portfolio-mgmt-help-tabs.php:26
+#: includes/portfolio-mgmt-help-tabs.php:156
+msgid "Custom Meta Data"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:112
+msgid ""
+"Portfolio Mgmt. will add a custom meta box to the portfolio post editor "
+"titled, Case Study Information. The Case Study Information meta box contains "
+"optional fields for attaching post meta data to a post. If your currently "
+"active theme does not automatically support the display of this data, you "
+"will need to customized your templates accordingly, inside the loop, using "
+"<code>get_post_meta( $post_id, $key, $single )</code>."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:114
+msgid "The available custom meta keys are:"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:119
+#: includes/portfolio-mgmt-help-tabs.php:43
+msgid "Featured Case Study"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:123
+#: includes/portfolio-mgmt-help-tabs.php:47
+#: includes/portfolio-mgmt-meta-boxes.php:73
+msgid "Client Name"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:127
+#: includes/portfolio-mgmt-help-tabs.php:51
+#: includes/portfolio-mgmt-meta-boxes.php:78
+msgid "Project URL"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:131
+#: includes/portfolio-mgmt-help-tabs.php:55
+#: includes/portfolio-mgmt-meta-boxes.php:83
+msgid "Project URL Text"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:137
+#: includes/portfolio-mgmt-help-tabs.php:61
+#, php-format
+msgid ""
+"Please see the WordPress Codex for <a href=\"%s\" target=\"_blank\">detailed "
+"information</a> about the <code>get_post_meta()</code> function."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:145
+msgid ""
+"If you are a theme developer, or are comfortable developing for WordPress, "
+"we have added template tags for you to use anywhere within your theme inside "
+"of the loop. For safe measures, <strong>always</strong> wrap these template "
+"tags with the conditional statement, <code>&lt;?php if "
+"( function_exists( &apos;wap8_portfolio&apos; ) ); ?&gt;</code>."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:150
+#: includes/portfolio-mgmt-help-tabs.php:83
+msgid "Comma Separated Services with Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:154
+#: includes/portfolio-mgmt-help-tabs.php:87
+msgid "Comma Separated Services without Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:158
+#: includes/portfolio-mgmt-help-tabs.php:91
+msgid "Unordered List of Services with Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:162
+#: includes/portfolio-mgmt-help-tabs.php:95
+msgid "Unordered List of Services without Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:166
+#: includes/portfolio-mgmt-help-tabs.php:99
+msgid "Comma Separated Portfolio Tags with Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:170
+#: includes/portfolio-mgmt-help-tabs.php:103
+msgid "Comma Separated Portfolio Tags without Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:174
+#: includes/portfolio-mgmt-help-tabs.php:107
+msgid "Unordered List of Portfolio Tags with Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:178
+#: includes/portfolio-mgmt-help-tabs.php:111
+msgid "Unordered List of Portfolio Tags without Links"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:184
+msgid ""
+"Comma separated template tags will return a list wrapped with a <code>&lt;"
+"p&gt;</code> tag. Unordered lists will be wrapped with the <code>&lt;ul&gt;</"
+"code> tag. When using a template tag with links, the links will point to an "
+"archive for that custom taxonomy. If your currently active theme does not "
+"contain the optional templates, the next available default template will be "
+"used. Please see <strong>Optional Templates</strong> for more information."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:190
+msgid "Plugin Customization"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:192
+msgid ""
+"By default, the plugin will create the following permalink link structure: "
+"<code>/portfolio</code>. It is possible for a theme or a plugin to change "
+"this structure, or any of the custom post type arguments, by filtering the "
+"data."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:194
+msgid ""
+"For example, you can change <strong>Portfolio</strong> to <strong>Work</"
+"strong> by doing the following:"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:213
+msgid "Available Filters"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:218
+msgid "Services"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:222
+msgid "Portfolio Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:226
+msgid "Portfolio"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:232
+msgid "Please Note"
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:234
+#, php-format
+msgid ""
+"If you decide to change the permalink structure, do not forget to visit the "
+"<a href=\"%s\">Permalink Settings</a> and click the <strong>Save Changes</"
+"strong> button to flush your rewrite rules."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:236
+#, php-format
+msgid ""
+"The above snippet of code is a simplified example. For the full scope of "
+"filterable arguments, please see the <a href=\"%s\" target=\"_blank"
+"\">WordPress Codex</a> page for registering a custom post type."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:238
+msgid ""
+"The same principle can be applied to modifying the custom taxonomy arguments."
+msgstr ""
+
+#: includes/portfolio-mgmt-doc.php:275 portfolio-mgmt.php:72
+msgid "Documentation"
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:28
+msgid ""
+"The Case Study Information meta box contains optional fields for attaching "
+"post meta data to a post. If your currently active theme does not "
+"automatically support the display of this data, you will need to customized "
+"your templates accordingly."
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:30
+msgid "Display Custom Meta Data in your Theme"
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:32
+msgid ""
+"To easily display this content in your theme, you will need to use the "
+"<code>get_post_meta()</code> function <strong>inside of the loop</strong>. "
+"This function must take three parameters to work properly&mdash; <code>"
+"$post_id</code>, <code>$key</code> and <code>$single</code>."
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:34
+msgid ""
+"Here is an example of how to display the client name, wrapped with a "
+"<code>&lt;p&gt;</code> tag, within your theme: <code>&lt;?php echo &apos;&lt;"
+"p&gt;&apos; . get_post_meta( $post-&gt;ID, &apos;_wap8_client_name&apos;, "
+"true ) . &apos;&lt;/p&gt;&apos;; ?&gt;</code>"
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:36
+msgid "Portfolio Manager Custom Meta Keys"
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:38
+msgid ""
+"Below, you will find the three keys for the Case Study Information meta box."
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:74
+msgid ""
+"Included with Portfolio Mgmt. are eight template tags for you to display a "
+"list of custom taxonomies associated with a portfolio post."
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:76
+msgid "Available Template Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:78
+msgid ""
+"These template tags <strong>must be placed inside the loop</strong> in order "
+"for theme to work as intended. We urge you to wrap your code with the "
+"conditional check of <code>&lt;?php if ( function_exists( &apos;"
+"wap8_portfolio&apos; ) ) ?&gt;</code>."
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:117
+msgid ""
+"Comma separated template tags will return a list wrapped with a <code>&lt;"
+"p&gt;</code> tag. Unordered lists will be wrapped with the <code>&lt;ul&gt;</"
+"code> tag."
+msgstr ""
+
+#: includes/portfolio-mgmt-help-tabs.php:119
+#, php-format
+msgid ""
+"<strong>Note:</strong> When using a template tag with links, the links will "
+"point to an archive for that custom taxonomy. If your currently active theme "
+"does not contain <a href=\"%1s\">the optional templates</a>, the next "
+"available default templates, in <a href=\"%2s\" target=\"_blank\">the "
+"WordPress template hierarchy</a>, will be used."
+msgstr ""
+
+#: includes/portfolio-mgmt-meta-boxes.php:25
+msgid " Information"
+msgstr ""
+
+#: includes/portfolio-mgmt-meta-boxes.php:63
+#, php-format
+msgid ""
+"<p>%s information is optional meta data that can be used by your theme.</p>"
+msgstr ""
+
+#: includes/portfolio-mgmt-meta-boxes.php:69
+#, php-format
+msgid "Feature this %s"
+msgstr ""
+
+#: includes/portfolio-mgmt-meta-boxes.php:87
+msgid ""
+"If your currently active theme does not already display this content, please "
+"click on the Help tab above for detailed instructions."
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:30
+msgctxt "taxonomy general name"
+msgid "Services"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:31
+msgctxt "taxonomy singular name"
+msgid "Service"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:32
+msgid "Search Services"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:33
+msgid "Popular Services"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:34
+msgid "All Services"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:35
+msgid "View Service"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:36
+msgid "Parent Service"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:37
+msgid "Parent Service:"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:38
+msgid "Edit Service"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:39
+msgid "Update Service"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:40
+msgid "Add New Service"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:41
+msgid "New Service"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:42
+msgid "Separate Services with commas"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:43
+msgid "Add or remove Services"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:44
+msgid "Choose from Most Used Services"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:45
+msgid "No Services found."
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:94
+msgctxt "taxonomy general name"
+msgid "Portfolio Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:95
+msgctxt "taxonomy singular name"
+msgid "Portfolio Tag"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:96
+msgid "Search Portfolio Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:97
+msgid "Popular Portfolio Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:98
+msgid "All Portfolio Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:99
+msgid "View Portfolio Tag"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:100
+msgid "Edit Portfolio Tag"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:101
+msgid "Update Portfolio Tag"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:102
+msgid "Add New Portfolio Tag"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:103
+msgid "New Portfolio Tag"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:104
+msgid "Separate Portfolio Tags with commas"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:105
+msgid "Add or Remove Portfolio Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:106
+msgid "Choose from Most Used Portfolio Tags"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:107
+msgid "No Portfolio Tags found."
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:157
+msgctxt "post type general name"
+msgid "Portfolio"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:158
+msgctxt "post type singular name"
+msgid "Portfolio"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:159
+msgctxt "wap8-portfolio"
+msgid "Add New"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:160
+msgid "All Case Studies"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:161
+msgid "Add New Case Study"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:162
+msgid "Edit"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:163
+msgid "Edit Case Study"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:164
+msgid "New Case Study"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:165
+msgid "View"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:166
+msgid "View Case Study"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:167
+msgid "Search Portfolio"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:168
+msgid "No Case Studies found"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:169
+msgid "No Case Studies found in Trash"
+msgstr ""
+
+#: includes/portfolio-mgmt-registrations.php:295
+msgid " Title"
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:32
+#, php-format
+msgid "%1$s updated. <a href=\"%2$s\">View %3$s</a>"
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:33
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:34
+msgid "Custom field deleted."
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:35
+#, php-format
+msgid "%s updated."
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:37
+#, php-format
+msgid "%1$s restored to revision from %2$s"
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:38
+#, php-format
+msgid "%1$s published. <a href=\"%2$s\">View %3$s</a>"
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:39
+#, php-format
+msgid "%s saved."
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:40
+#, php-format
+msgid "%1$s submitted. <a target=\"_blank\" href=\"%2$s\">Preview %3$s</a>"
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:41
+#, php-format
+msgid ""
+"%1$s scheduled for: <strong>%2$s</strong>. <a target=\"_blank\" href=\"%3$s"
+"\">Preview %4$s</a>"
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:43
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/portfolio-mgmt-updated-messages.php:44
+#, php-format
+msgid "%1$s draft updated. <a target=\"_blank\" href=\"%2$s\">Preview %3$s</a>"
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:35
+msgid "Display recent portfolio posts."
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:38
+msgid "Recent Portfolio Posts"
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:108
+msgid "There are no published case studies."
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:154
+msgid "Title"
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:159
+msgid "Posts to show"
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:160
+msgid "Max: 10"
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:164
+msgid "Display featured thumbnail"
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:168
+msgid "Display title"
+msgstr ""
+
+#: includes/portfolio-mgmt-widget.php:172
+msgid "Featured Posts Only"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Portfolio Mgmt."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://heavyheavy.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Add the power of portfolio content management to your WordPress website with "
+"Portfolio Mgmt."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Heavy Heavy"
+msgstr ""

@@ -17,7 +17,7 @@
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -42,7 +42,7 @@ function wap8_list_services( $post_id ) {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -85,7 +85,7 @@ function wap8_list_services_nolink( $post_id ) {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.0 Fixed an issue with the returned markup
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -113,8 +113,8 @@ function wap8_ul_services( $post_id ) {
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @since 1.1.6 Properly escapting HTML output
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -127,7 +127,7 @@ function wap8_ul_services_nolink( $post_id ) {
 		echo '<ul class="folio-services">' . "\n"; // opening unordered list tag
 
 		foreach ( $terms as $term) { // loop through all of the found terms
-			echo '<li>' . $term->name . '</li>' . "\n"; // wrap each term name with a list item tag
+			echo '<li>' . esc_html( $term->name ) . '</li>' . "\n"; // wrap each term name with a list item tag
 		}
 
 		echo '</ul>' . "\n"; // closing unordered list tag
@@ -154,7 +154,7 @@ function wap8_ul_services_nolink( $post_id ) {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -179,7 +179,7 @@ function wap8_list_folio_tags( $post_id ) {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -222,7 +222,7 @@ function wap8_list_folio_tags_nolink( $post_id ) {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -250,7 +250,7 @@ function wap8_ul_folio_tags( $post_id ) {
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.1.6 Properly escaping HTML output
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -264,7 +264,7 @@ function wap8_ul_folio_tags_nolink( $post_id ) {
 		echo '<ul class="folio-tags">' . "\n"; // opening unordered list tag
 
 		foreach ( $terms as $term) { // loop through all of the found terms
-			echo '<li>' . $term->name . '</li>' . "\n"; // wrap each term name with a list item tag
+			echo '<li>' . esc_html( $term->name ) . '</li>' . "\n"; // wrap each term name with a list item tag
 		}
 
 		echo '</ul>' . "\n"; // closing unordered list tag

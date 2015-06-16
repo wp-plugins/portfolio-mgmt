@@ -20,29 +20,29 @@ add_action( 'init', 'wap8_portfolio', 10 );
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.5 Fixed incorrect text domain
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
 function wap8_portfolio_services() {
 
 	$labels = array(
-		'name'                       => _x( 'Services', 'taxonomy general name', 'wap8plugin-i18n' ),
-		'singular_name'              => _x( 'Service', 'taxonomy singular name', 'wap8plugin-i18n' ),
-		'search_items'               => __( 'Search Services', 'wap8plugin-i18n' ),
-		'popular_items'              => __( 'Popular Services', 'wap8plugin-i18n' ),
-		'all_items'                  => __( 'All Services', 'wap8plugin-i18n' ),
-		'view_item'                  => __( 'View Service', 'wap8plugin-i18n' ),
-		'parent_item'                => __( 'Parent Service', 'wap8plugin-i18n' ),
-		'parent_item_colon'          => __( 'Parent Service:', 'wap8plugin-i18n' ),
-		'edit_item'                  => __( 'Edit Service', 'wap8plugin-i18n' ),
-		'update_item'                => __( 'Update Service', 'wap8plugin-i18n' ),
-		'add_new_item'               => __( 'Add New Service', 'wap8plugin-i18n' ),
-		'new_item_name'              => __( 'New Service', 'wap8plugin-i18n' ),
-		'separate_items_with_commas' => __( 'Separate Services with commas', 'wap8plugin-i18n' ),
-		'add_or_remove_items'        => __( 'Add or remove Services', 'wap8plugin-i18n' ),
-		'choose_from_most_used'      => __( 'Choose from Most Used Services', 'wap8plugin-i18n' ),
-		'not_found'                  => __( 'No Services found.', 'wap8plugin-i18n' ),
+		'name'                       => _x( 'Services', 'taxonomy general name', 'portfolio-mgmt' ),
+		'singular_name'              => _x( 'Service', 'taxonomy singular name', 'portfolio-mgmt' ),
+		'search_items'               => __( 'Search Services', 'portfolio-mgmt' ),
+		'popular_items'              => __( 'Popular Services', 'portfolio-mgmt' ),
+		'all_items'                  => __( 'All Services', 'portfolio-mgmt' ),
+		'view_item'                  => __( 'View Service', 'portfolio-mgmt' ),
+		'parent_item'                => __( 'Parent Service', 'portfolio-mgmt' ),
+		'parent_item_colon'          => __( 'Parent Service:', 'portfolio-mgmt' ),
+		'edit_item'                  => __( 'Edit Service', 'portfolio-mgmt' ),
+		'update_item'                => __( 'Update Service', 'portfolio-mgmt' ),
+		'add_new_item'               => __( 'Add New Service', 'portfolio-mgmt' ),
+		'new_item_name'              => __( 'New Service', 'portfolio-mgmt' ),
+		'separate_items_with_commas' => __( 'Separate Services with commas', 'portfolio-mgmt' ),
+		'add_or_remove_items'        => __( 'Add or remove Services', 'portfolio-mgmt' ),
+		'choose_from_most_used'      => __( 'Choose from Most Used Services', 'portfolio-mgmt' ),
+		'not_found'                  => __( 'No Services found.', 'portfolio-mgmt' ),
 	);
 
 	$args = array(
@@ -84,27 +84,27 @@ function wap8_portfolio_services() {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.8 Allow $args to be filtered by theme or plugin
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
 function wap8_portfolio_tags() {
 
 	$labels = array(
-		'name'                       => _x( 'Portfolio Tags', 'taxonomy general name', 'wap8plugin-i18n' ),
-		'singular_name'              => _x( 'Portfolio Tag', 'taxonomy singular name', 'wap8plugin-i18n'),
-		'search_items'               => __( 'Search Portfolio Tags', 'wap8plugin-i18n' ),
-		'popular_items'              => __( 'Popular Portfolio Tags', 'wap8plugin-i18n' ),
-		'all_items'                  => __( 'All Portfolio Tags', 'wap8plugin-i18n' ),
-		'view_item'                  => __( 'View Portfolio Tag', 'wap8plugin-i18n' ),
-		'edit_item'                  => __( 'Edit Portfolio Tag', 'wap8plugin-i18n' ),
-		'update_item'                => __( 'Update Portfolio Tag', 'wap8plugin-i18n' ),
-		'add_new_item'               => __( 'Add New Portfolio Tag', 'wap8plugin-i18n' ),
-		'new_item_name'              => __( 'New Portfolio Tag', 'wap8plugin-i18n' ),
-		'separate_items_with_commas' => __( 'Separate Portfolio Tags with commas', 'wap8plugin-i18n' ),
-		'add_or_remove_items'        => __( 'Add or Remove Portfolio Tags', 'wap8plugin-i18n' ),
-		'choose_from_most_used'      => __( 'Choose from Most Used Portfolio Tags', 'wap8plugin-i18n' ),
-		'not_found'                  => __( 'No Portfolio Tags found.', 'wap8plugin-i18n' ),
+		'name'                       => _x( 'Portfolio Tags', 'taxonomy general name', 'portfolio-mgmt' ),
+		'singular_name'              => _x( 'Portfolio Tag', 'taxonomy singular name', 'portfolio-mgmt'),
+		'search_items'               => __( 'Search Portfolio Tags', 'portfolio-mgmt' ),
+		'popular_items'              => __( 'Popular Portfolio Tags', 'portfolio-mgmt' ),
+		'all_items'                  => __( 'All Portfolio Tags', 'portfolio-mgmt' ),
+		'view_item'                  => __( 'View Portfolio Tag', 'portfolio-mgmt' ),
+		'edit_item'                  => __( 'Edit Portfolio Tag', 'portfolio-mgmt' ),
+		'update_item'                => __( 'Update Portfolio Tag', 'portfolio-mgmt' ),
+		'add_new_item'               => __( 'Add New Portfolio Tag', 'portfolio-mgmt' ),
+		'new_item_name'              => __( 'New Portfolio Tag', 'portfolio-mgmt' ),
+		'separate_items_with_commas' => __( 'Separate Portfolio Tags with commas', 'portfolio-mgmt' ),
+		'add_or_remove_items'        => __( 'Add or Remove Portfolio Tags', 'portfolio-mgmt' ),
+		'choose_from_most_used'      => __( 'Choose from Most Used Portfolio Tags', 'portfolio-mgmt' ),
+		'not_found'                  => __( 'No Portfolio Tags found.', 'portfolio-mgmt' ),
 	);
 
 	$args = array(
@@ -147,26 +147,26 @@ function wap8_portfolio_tags() {
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.1 Updated the menu icon
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
 function wap8_portfolio() {
 
 	$labels = array(
-		'name'               => _x( 'Portfolio', 'post type general name', 'wap8plugin-i18n' ),
-		'singular_name'      => _x( 'Portfolio', 'post type singular name', 'wap8plugin-i18n' ),
-		'add_new'            => _x( 'Add New', 'wap8-portfolio', 'wap8plugin-i18n' ),
-		'all_items'          => __( 'All Case Studies', 'wap8plugin-i18n' ),
-		'add_new_item'       => __( 'Add New Case Study', 'wap8plugin-i18n' ),
-		'edit'               => __( 'Edit', 'wap8plugin-i18n' ),
-		'edit_item'          => __( 'Edit Case Study', 'wap8plugin-i18n' ),
-		'new_item'           => __( 'New Case Study', 'wap8plugin-i18n' ),
-		'view'               => __( 'View', 'wap8plugin-i18n' ),
-		'view_item'          => __( 'View Case Study', 'wap8plugin-i18n' ),
-		'search_items'       => __( 'Search Portfolio', 'wap8plugin-i18n' ),
-		'not_found'          => __( 'No Case Studies found', 'wap8plugin-i18n' ),
-		'not_found_in_trash' => __( 'No Case Studies found in Trash', 'wap8plugin-i18n' ),
+		'name'               => _x( 'Portfolio', 'post type general name', 'portfolio-mgmt' ),
+		'singular_name'      => _x( 'Portfolio', 'post type singular name', 'portfolio-mgmt' ),
+		'add_new'            => _x( 'Add New', 'wap8-portfolio', 'portfolio-mgmt' ),
+		'all_items'          => __( 'All Case Studies', 'portfolio-mgmt' ),
+		'add_new_item'       => __( 'Add New Case Study', 'portfolio-mgmt' ),
+		'edit'               => __( 'Edit', 'portfolio-mgmt' ),
+		'edit_item'          => __( 'Edit Case Study', 'portfolio-mgmt' ),
+		'new_item'           => __( 'New Case Study', 'portfolio-mgmt' ),
+		'view'               => __( 'View', 'portfolio-mgmt' ),
+		'view_item'          => __( 'View Case Study', 'portfolio-mgmt' ),
+		'search_items'       => __( 'Search Portfolio', 'portfolio-mgmt' ),
+		'not_found'          => __( 'No Case Studies found', 'portfolio-mgmt' ),
+		'not_found_in_trash' => __( 'No Case Studies found in Trash', 'portfolio-mgmt' ),
 	);
 
 	$supports = array(
@@ -220,7 +220,7 @@ function wap8_portfolio() {
  * @package Portfolio Mgmt.
  * @version 1.0.8
  * @since 1.0.8
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -254,7 +254,7 @@ register_deactivation_hook( __FILE__, 'wap8_portfolio_mgmt_deactivation', 10 );
  * @package Portfolio Mgmt.
  * @version 1.0.8
  * @since 1.0.8
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -279,7 +279,7 @@ add_filter( 'enter_title_here', 'wap8_portfolio_mgmt_title_field_label', 10, 1 )
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.1.5 Accounting for filtered post type arguments
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
@@ -292,7 +292,7 @@ function wap8_portfolio_mgmt_title_field_label( $title ) {
 		$portfolio       = get_post_type_object( 'wap8-portfolio' );
 		$portfolio_label = $portfolio->labels->singular_name;
 
-		$title = $portfolio_label . __( ' Title', 'wap8plugin-i18n' );
+		$title = $portfolio_label . __( ' Title', 'portfolio-mgmt' );
 
 	}
 
@@ -314,7 +314,7 @@ add_action( 'init', 'wap8_portfolio_mgmt_post_thumbnail', 10 );
  * @package Portfolio Mgmt.
  * @version 1.0.0
  * @since 1.0.0
- * @author Erik Ford for We Are Pixel8 <@notdivisible>
+ * @author Heavy Heavy <@heavyheavyco>
  *
  */
 
