@@ -22,11 +22,6 @@ With Portfolio Mgmt., you can bring the power of portfolio content management to
 	
 Please see the WordPress Codex for detailed information about template hierarchies at http://codex.wordpress.org/Template_Hierarchy.
 
-Translations
-------------
-
-* Serbo-Croatian by [Borisa Djuraskovic/Web Hosting Hub](http://www.webhostinghub.com)
-
 == Installation ==
 
 You can install Portfolio Mgmt. either via the WordPress Dashboard or by uploading the extracted `portfolio-mgmt` folder to your `/wp-content/plugins/` directory. Once the plugin has been successfully installed, simply activate the plugin through the Plugins menu in your WordPress Dashboard.
@@ -46,6 +41,9 @@ Yes. The custom post type and custom taxonomy arguments are filterable allowing 
 
 = Does Portfolio Mgmt. come with any widgets? =
 Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most recently published portfolio posts in any widget ready area.
+
+= Is the plugin translatable? =
+Yes. If you have translated the plugin into your language, please send the translation files to [hello@heavyheavy.com](hello@heavyheavy.com) for inclusion in future releases.
 
 == Screenshots ==
 
