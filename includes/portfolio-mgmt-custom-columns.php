@@ -15,7 +15,7 @@ add_filter( 'manage_edit-wap8-portfolio_columns', 'wap8_custom_portfolio_columns
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.1.5 Properly escaping the text being output in the columns.
+ * @since 1.1.7 Added filter for custom column arguments
  * @author Heavy Heavy <@heavyheavyco>
  *
  */
@@ -42,6 +42,7 @@ function wap8_custom_portfolio_columns( $columns ) {
 		'date'                       => _x( __( 'Date', 'portfolio-mgmt' ), 'column name' ),
 	);
 
+    $columns = apply_filters( 'portfolio_mgmt_custom_columns_args', $columns);
 	return $columns;
 
 }

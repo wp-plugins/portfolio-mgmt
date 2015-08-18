@@ -98,3 +98,8 @@ Portfolio Mgmt. 1.1.6
 
 * Fixed an issue that prevented the Clients column from being sortable in the dashboard
 * Fixed inconsistencies in text domain name space
+
+Portfolio Mgmt. 1.1.7
+=====================
+
+* Added filter for custom column arguments for post edit screen
