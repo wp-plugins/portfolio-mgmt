@@ -2,8 +2,8 @@
 Contributors: heavyheavy, wearepixel8
 Tags: custom post type, portfolio, post type, widget
 Requires at least: 3.5
-Compatible up to: 4.2.4
-Tested up to: 4.2.4
+Compatible up to: 4.3
+Tested up to: 4.3
 Stable tag: 1.1.7
 License: GPLv2
 
