@@ -103,3 +103,8 @@ Portfolio Mgmt. 1.1.7
 =====================
 
 * Added filter for custom column arguments for post edit screen
+
+Portfolio Mgmt. 1.1.8
+=====================
+
+* Updated widget to be compatible with WordPress 4.3

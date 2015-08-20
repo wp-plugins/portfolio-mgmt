@@ -35,7 +35,11 @@ class wap8_Portfolio_Widget extends WP_Widget {
 			'description' => __( 'Display recent portfolio posts.', 'portfolio-mgmt' ),
 			);
 
-		$this->WP_Widget( 'wap8-Portfolio-widget', __( 'Recent Portfolio Posts', 'portfolio-mgmt' ), $widget_ops );	
+		parent::__construct(
+            'wap8-portfolio-widget',
+            __( 'Recent Portfolio Posts', 'portfolio-mgmt' ),
+            $widget_ops
+        );	
 
 	}
 

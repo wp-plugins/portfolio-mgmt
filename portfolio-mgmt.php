@@ -3,7 +3,7 @@
 Plugin Name: Portfolio Mgmt.
 Plugin URI: http://erikford.me/plugins/portfolio-mgmt-plugin/
 Description: Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
-Version: 1.1.7
+Version: 1.1.8
 Author: Heavy Heavy
 Author URI: http://heavyheavy.com
 Contributors: We Are Pixel8
